@@ -8,16 +8,16 @@ Required: LLamaLibrary BotBase
 <Profile>
 	<Name>Dragonsung Alembic</Name>
 	<Order>
-	
+
 	<RunCode Name="Disable_Flight"/>
-	
+
 	<StopCrafting/>
-	
+
 	<If Condition="ClassName != ClassJobType.Alchemist">
 		<ChangeClass Job="Alchemist" force="True"/>
 	</If>
 	<If Condition="ClassName == ClassJobType.Alchemist and Core.Player.ClassLevel &gt; 79">
-		
+
 		<If Condition="not IsQuestCompleted(69384)">
 			<If Condition="not HasQuest(69384) and not IsQuestCompleted(69384) and IsQuestCompleted(69208)">
 				<GetTo ZoneId="418" XYZ="150.3899, -20, 64.72313"/>
@@ -34,7 +34,7 @@ Required: LLamaLibrary BotBase
 				<RunCode Name="Coffer"/>
 			</If>
 		</If>
-		
+
 		<If Condition="not IsQuestCompleted(69385) and IsQuestCompleted(69384)">
 			<If Condition="not HasQuest(69385) and not IsQuestCompleted(69385) and IsQuestCompleted(69384)">
 				<GetTo ZoneId="418" XYZ="-163.47, 16.97958, -29.31262"/>
@@ -44,12 +44,12 @@ Required: LLamaLibrary BotBase
 				</If>
 			</If>
 		</If>
-		
+
 		<If Condition="not (HasItem(29618) or HasItem(29629) or HasItem(29640) or HasItem(29640) or HasItem(30288) or HasItem(30299) or HasItem(31720))">
 			<GetTo ZoneId="418" XYZ="-161.5168, 16.99999, -57.14508"/>
 			<BuyItem ItemId="29618" ItemCount="1" DialogOption="2" NpcId="1032900" XYZ="-161.5168, 16.99999, -57.14508"/>
 		</If>
-		
+
 		<While Condition="HasItem(29618)"><!-- Skysteel Alembic -->
 			<If Condition="not HqHasAtLeast(29651,20)"><!-- Oddly Specific Synthetic Resin --><!-- +1 -->
 				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29651,'Amount':20,'Hq':true,'Enabled':true,'Type':'Alchemist'}]"/>
@@ -68,7 +68,7 @@ Required: LLamaLibrary BotBase
 				<RunCode Name="CloseShop"/>
 			</If>
 		</While>
-		
+
 		<While Condition="HasItem(29629)"><!-- Skysteel Alembic +1 -->
 			<If Condition="not HqHasAtLeast(29659,30)"><!-- Oddly Specific Glass --><!-- +1 -->
 				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29659,'Amount':30,'Hq':true,'Enabled':true,'Type':'Alchemist'}]"/>
@@ -87,7 +87,7 @@ Required: LLamaLibrary BotBase
 				<RunCode Name="CloseShop"/>
 			</If>
 		</While>
-		
+
 		<If Condition="HasItem(29640) and HasQuest(69385)"><!-- Dragonsung Alembic -->
 			<While Condition="ClassName != ClassJobType.Alchemist">
 				<ChangeClass Job="Alchemist" force="True"/>
@@ -102,14 +102,14 @@ Required: LLamaLibrary BotBase
 				<LLSmallTalk WaitTime="1500"/>
 			</If>
 		</If>
-		
-		<!-- Part 2 -->	
-			
+
+		<!-- Part 2 -->
+
 		<While Condition="ClassName != ClassJobType.Alchemist">
 			<ChangeClass Job="Alchemist" force="True"/>
 		</While>
-		
-		<If Condition="not IsQuestCompleted(69428) and IsQuestCompleted(69385)">	
+
+		<If Condition="not IsQuestCompleted(69428) and IsQuestCompleted(69385)">
 			<If Condition="not HasQuest(69428) and not IsQuestCompleted(69428) and IsQuestCompleted(69384)">
 				<GetTo ZoneId="418" XYZ="-163.47, 16.97958, -29.31262"/>
 				<If Condition="IsQuestAcceptQualified(69428)">
@@ -123,7 +123,7 @@ Required: LLamaLibrary BotBase
 				<LLSmallTalk WaitTime="1500"/>
 			</If>
 		</If>
-		<While Condition="not HasQuest(69429) and HasItem(29640)">	
+		<While Condition="not HasQuest(69429) and HasItem(29640)">
 			<GetTo ZoneId="418" XYZ="-165.3315, 16.97958, -30.53339"/>
 			<RunCode Name="EverSkyward"/>
 		</While>
@@ -131,14 +131,14 @@ Required: LLamaLibrary BotBase
 			<If Condition="LLHasItemCollectable(31107)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
 				<RunCode Name="TurnIn"/>
-			</If>	
+			</If>
 			<If Condition="not HasAtLeast(30327,90)"> <!-- Alchemist's Gobbiegoo -->
 				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31107,'Amount':30,'Enabled':true,'Type':'Alchemist'}]"/>
 			</If>
 			<If Condition="LLHasItemCollectable(31107)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
 				<RunCode Name="TurnIn"/>
-			</If>	
+			</If>
 			<If Condition="HasAtLeast(30327,90)">
 				<GetTo ZoneId="418" XYZ="-165.3315, 16.97958, -30.53339"/>
 				<ChangeClass Job="Alchemist" force="True"/>
@@ -146,7 +146,7 @@ Required: LLamaLibrary BotBase
 				<LLSmallTalk WaitTime="1500"/>
 			</If>
 		</If>
-		<While Condition="not HasQuest(69430) and HasItem(30288)">	
+		<While Condition="not HasQuest(69430) and HasItem(30288)">
 			<GetTo ZoneId="418" XYZ="-165.3315, 16.97958, -30.53339"/>
 			<RunCode Name="ToolsOfTomorrow"/>
 		</While>
@@ -157,7 +157,7 @@ Required: LLamaLibrary BotBase
 			</If>
 			<If Condition="not HasAtLeast(30328,105)"> <!-- Highly Viscous Alchemist's Gobbiegoo -->
 				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31115,'Amount':30,'Enabled':true,'Type':'Alchemist'}]"/>
-			</If>	
+			</If>
 			<If Condition="LLHasItemCollectable(31115)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
 				<RunCode Name="TurnIn"/>
@@ -169,12 +169,12 @@ Required: LLamaLibrary BotBase
 				<LLSmallTalk WaitTime="1500"/>
 			</If>
 		</If>
-		
+
 		<!-- Part 3 -->
-		
+
 		<While Condition="ClassName != ClassJobType.Alchemist">
 			<ChangeClass Job="Alchemist" force="True"/>
-		</While>		
+		</While>
 
 		<!-- Oddness in the End -->
 		<If Condition="not HasQuest(69518) and not IsQuestCompleted(69518)">
@@ -199,13 +199,34 @@ Required: LLamaLibrary BotBase
 			  </If>
 			</If>
 			<While Condition="GetQuestStep(69519) == 255">
-				<Lisbeth Json="[{'Group':1,'Item':18,'Amount':180,'Enabled':true,'Type':'Gather','AmountMode':'Restock'},{'Id':1,'Group':1,'Item':19,'Amount':180,'Enabled':true,'Type':'Gather','AmountMode':'Restock'},{'Id':2,'Group':1,'Item':31764,'Amount':60,'Enabled':true,'Type':'Exchange','AmountMode':'Restock'},{'Id':3,'Group':1,'Item':31997,'Amount':300,'Enabled':true,'Type':'ResourceApproval','AmountMode':'Restock'},{'Id':4,'Group':1,'Item':31992,'Amount':300,'Enabled':true,'Type':'ResourceApproval','AmountMode':'Restock'}]"/>
-				<While Condition="not HasAtLeast(31742,60)"> <!-- Oddly Delicate Alembic Part -->		
-					<LisbethTravel Area="The Firmament" Position="-73.19273, -10, 172.5722"/>
-					<Lisbeth IgnoreHome="True" Json="[{'Group':1,'Item':31756,'Amount':5,'Enabled':true,'Type':'Alchemist','Collectable':true}]"/> <!-- Oddly Delicate Holy Water -->
-					<LisbethTravel Area="The Firmament" Position="-73.19273, -10, 172.5722"/>
-					<RunCode Name="TurnInOddly"/>
-				</While>			
+				<!-- 先判断背包是否有收藏品，有说明采集过材料了-->
+				<!-- 原因：每次lisbeth执行完生产操作该脚本会重头开始运行，而材料在上一轮生产中被消耗了一部分，导致材料不够的判断条件成立，会重复采集材料 -->
+				<If Condition="not LLHasItemCollectable(31756)">
+					<!--判断水晶数量是否足够-->
+					<If Condition="not HasAtLeast(18, 180) or not HasAtLeast(19, 180)">
+						<Lisbeth Json="[{'Group':1,'Item':18,'Amount':180,'Enabled':true,'Type':'Gather','AmountMode':'Restock'},
+										{'Id':1,'Group':1,'Item':19,'Amount':180,'Enabled':true,'Type':'Gather','AmountMode':'Restock'}]"/>
+					</If>
+					<!--判断背包是否有足够制作天钢工具的材料-->
+					<If Condition="not HasAtLeast(31764, 30) or not HasAtLeast(31997, 150) or not HasAtLeast(31992, 150)">
+						<Lisbeth Json="[{'Id':2,'Group':1,'Item':31764,'Amount':30,'Enabled':true,'Type':'Exchange','AmountMode':'Restock'},
+										{'Id':3,'Group':1,'Item':31997,'Amount':150,'Enabled':true,'Type':'ResourceApproval','AmountMode':'Restock'},
+										{'Id':4,'Group':1,'Item':31992,'Amount':150,'Enabled':true,'Type':'ResourceApproval','AmountMode':'Restock'}]"/>
+					</If>
+				</If>
+
+				<While Condition="not HasAtLeast(31742,60)"> <!-- Oddly Delicate Cross-pein Hammer part -->
+					<!--兑换背包的收藏品为零件-->
+					<If Condition="LLHasItemCollectable(31756)">
+						<LisbethTravel Area="The Firmament" Position="-73.19273, -10, 172.5722"/>
+						<RunCode Name="TurnInOddly"/>
+					</If>
+					<!-- 制作收藏品 -->
+					<If Condition="not HasAtLeast(31742,60)">
+						<Lisbeth IgnoreHome="True" Json="[{'Group':1,'Item':31756,'Amount':5,'Enabled':true,'Type':'Alchemist','Collectable':true, 'AmountMode':'Restock'}]"/> <!-- Oddly Delicate Holy Water -->
+					</If>
+				</While>
+
 				<While Condition="HasAtLeast(31742,60)"> <!-- Oddly Delicate Alembic Part -->
 				  <ChangeClass Job="Alchemist" force="True"/>
 					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 30299">
@@ -214,19 +235,19 @@ Required: LLamaLibrary BotBase
 						<BuyItem NpcId="1001563" ItemId="2468" ItemCount="1" DialogOption="1" XYZ="-8.346741,-2.04808,-149.3401"/>
 						<EquipWeapon ItemID="2468"/>
 						<WaitTimer WaitTime="3" />
-					</While>				  
+					</While>
 				  <LisbethTravel Zone="886" Subzone="3526" Position="-74.0461, -10, 168.7935"/>
 				  <LLTurnIn QuestId="69519" NpcId="1035012" XYZ="-72.67877, -10, 169.1157"/>
-				  <LLSmallTalk/>				  
-				</While>	
-			</While>			
+				  <LLSmallTalk/>
+				</While>
+			</While>
 		</If>
-		
+
 		<If Condition="HasItem(31720)">
 			<EquipWeapon ItemID="31720"/>
 			<AutoEquip UpdateGearSet="true"/>
 			<LLSellItem ItemIds="31756,31742,31978,31992"/>
-		</If>		
+		</If>
 
 		<If Condition="HasItem(31720) and not IsQuestCompleted(69520)"><!-- Skybuilders' Alembic -->
 			<!--  Greater Heights -->
@@ -245,41 +266,41 @@ Required: LLamaLibrary BotBase
 			  <LisbethTravel Zone="418" Subzone="0" Position="-161.2474, 16.97958, -29.26642"/>
 			  <LLTurnIn QuestId="69520" NpcId="1032898" XYZ="-163.47, 16.97958, -29.31262"/>
 			  <LLSmallTalk/>
-			</If>		
+			</If>
 		</If>
 
 		<If Condition="HasItem(31720)"> <!-- Skybuilders' Alembic -->
 		  <If Condition="HasAtLeast(31742,1)"> <!-- Oddly Delicate Alembic Part -->
 			<RunCode name="DiscardOddlyDelicateAlembicPart"/>
-		  </If>	
+		  </If>
 		</If>
-		
+
 	</If>
 
 	<LLoadProfile Path="../Skysteel Start.xml"/>
-	
+
 	</Order>
 	<CodeChunks>
 		<CodeChunk Name="DiscardOddlyDelicateAlembicPart">
-		  <![CDATA[ 
+		  <![CDATA[
             BagSlot toDiscard = InventoryManager.FilledInventoryAndArmory.First(x => x.RawItemId == 31742);
             if (toDiscard != null && toDiscard.IsFilled) LlamaLibrary.Extensions.BagSlotExtensions.Discard(toDiscard);
 		  ]]>
-		</CodeChunk>	
+		</CodeChunk>
 		<CodeChunk Name="TurnIn">
 		<![CDATA[
 			Logging.Write("[Skysteel Handin] calling");
 			await LlamaLibrary.TesterBase.TurninSkySteelCrafting();
 		]]>
-		</CodeChunk>		
+		</CodeChunk>
 		<CodeChunk Name="ManualTurnIn">
-		<![CDATA[ 
+		<![CDATA[
 			Core.OverlayManager.AddToast(() => "Please manually turn in collectables and press start again.", TimeSpan.FromMilliseconds(10000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
 			await Coroutine.Sleep(3000);
 		]]>
 		</CodeChunk>
 		<CodeChunk Name="EverSkyward">
-			<![CDATA[ 
+			<![CDATA[
 				var npcId = GameObjectManager.GetObjectByNPCId(1032899);
 
 				if (!npcId.IsWithinInteractRange)
@@ -324,7 +345,7 @@ Required: LLamaLibrary BotBase
 			]]>
 		</CodeChunk>
 		<CodeChunk Name="ToolsOfTomorrow">
-			<![CDATA[ 
+			<![CDATA[
 				var npcId = GameObjectManager.GetObjectByNPCId(1032899);
 
 				if (!npcId.IsWithinInteractRange)
@@ -369,7 +390,7 @@ Required: LLamaLibrary BotBase
 			]]>
 		</CodeChunk>
 		<CodeChunk Name="CloseShop">
-			<![CDATA[ 
+			<![CDATA[
 				var windowName = "ShopExchangeItem";
 				await Coroutine.Wait(5000, () => RaptureAtkUnitManager.GetWindowByName(windowName) != null);				
 				AtkAddonControl windowByName = RaptureAtkUnitManager.GetWindowByName(windowName);					
@@ -380,16 +401,16 @@ Required: LLamaLibrary BotBase
 			]]>
 		</CodeChunk>
 		<CodeChunk Name="Coffer">
-			<![CDATA[		
+			<![CDATA[
 				foreach (var bagslot in InventoryManager.FilledSlots.Where(bagslot => bagslot.Item.ItemAction == 388))
 				{
                 bagslot.UseItem();
                 await Coroutine.Sleep(5000);
 				}
-			]]> 
+			]]>
 		</CodeChunk>
 		<CodeChunk Name="SkysteelALC3">
-			<![CDATA[ 
+			<![CDATA[
 				BagSlot EquipSlot = ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand];
 				foreach(ff14bot.Managers.BagSlot slot in ff14bot.Managers.InventoryManager.FilledInventoryAndArmory)
 				{
@@ -512,13 +533,13 @@ Required: LLamaLibrary BotBase
 					}					
 
 					
-			]]>			
+			]]>
 		</CodeChunk>
 		<CodeChunk Name="TurnInOddly">
 		<![CDATA[
 			Logging.Write("[Skysteel Handin] calling");
 			await LlamaLibrary.Helpers.GeneralFunctions.TurninOddlyDelicate();
 		]]>
-		</CodeChunk>		
+		</CodeChunk>
 	</CodeChunks>
 </Profile>
