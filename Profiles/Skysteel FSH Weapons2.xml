@@ -213,14 +213,17 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 						<LisbethTravel Zone="614" Position="725.9725, 171.3199, 140.2527"/>
 					</If>
 					<RunCode Name="DisableMount"/>
-					<ExFish EnableKeeper="True" Stealth="true" Condition="HasAtLeast(30136,1) and not HqHasAtLeast(31129,60)" Mooch="0" Snagging="False" CordialType="Auto" MinFish="&MinFish;" MaxFish="&MaxFish;" ShuffleFishSpots="True" Bait="Signature Skyball" Mount="False" Patience="Patience" MinimumGPPatience="400">
+					<!--
+					<ExFish EnableKeeper="True" Stealth="true" Condition="HasAtLeast(30136,1) and not HqHasAtLeast(31129,60)" Mooch="0" Snagging="False" CordialType="Auto" MinFish="&MinFish;" MaxFish="&MaxFish;" ShuffleFishSpots="false" Bait="Signature Skyball" Mount="False" Patience="Patience" MinimumGPPatience="400">
+					-->
+					<ExFish EnableKeeper="True" Stealth="true" Condition="HasAtLeast(30136,1) and not HqHasAtLeast(31129,60)" Mooch="0" Snagging="False" CordialType="Auto" MinFish="99" MaxFish="99" ShuffleFishSpots="false" Bait="Signature Skyball" Mount="False" Patience="Patience" MinimumGPPatience="400">
 						<Keepers>
 							<!--名称修改为中文-->
 							<Keeper Name="梅花贝"/>
 						</Keepers>
 						<FishSpots>
 							<FishSpot XYZ="732.0558, 170.5047, 136.6764" Heading="2" Sit="True"/>
-							<FishSpot XYZ="689.8331, 170.9021, 115.093" Heading="9" Sit="True"/>
+							<FishSpot XYZ="689.8331, 170.9021, 115.093" Heading="5" Sit="True"/>
 						</FishSpots>
 						<PatienceTugs>
 							<PatienceTug Mooch="0" TugType="Light"/>
@@ -277,26 +280,29 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 						<LisbethTravel Zone="402" Position="-270.4953, -160.2399, -513.6054"/>
 					</If>
 					<RunCode Name="DisableMount"/>
-					<ExFish EnableKeeper="True" Stealth="true" Condition="HasAtLeast(30136,1) and not HqHasAtLeast(31134,70)" Mooch="0" Snagging="False" CordialType="Auto" MinFish="&MinFish;" MaxFish="&MaxFish;" ShuffleFishSpots="True" Bait="Signature Skyball" Mount="False" Patience="Patience" MinimumGPPatience="400">
+					<!--
+					<ExFish EnableKeeper="True" Stealth="true" Condition="HasAtLeast(30136,1) and not HqHasAtLeast(31134,70)" Mooch="0" Snagging="False" CordialType="Auto" MinFish="&MinFish;" MaxFish="&MaxFish;" ShuffleFishSpots="false" Bait="Signature Skyball" Mount="False" Patience="Patience" MinimumGPPatience="400">
+					-->
+					<ExFish EnableKeeper="True" Stealth="true" Condition="HasAtLeast(30136,1) and not HqHasAtLeast(31134,70)" Mooch="0" Snagging="False" CordialType="Auto" MinFish="99" MaxFish="99" ShuffleFishSpots="false" Bait="Signature Skyball" Mount="False" Patience="Patience" MinimumGPPatience="400">
 						<Keepers>
 							<!--名称修改为中文-->
 							<Keeper Name="亚拉戈猎手"/>
 						</Keepers>
 						<FishSpots>
-							<FishSpot XYZ="-276.7496, -160.0106, -509.9176" Heading="8.0" Sit="True"/>
-							<FishSpot XYZ="-272.7972, -159.5398, -487.7579" Heading="12.0" Sit="True"/>
+							<FishSpot XYZ="-267.2899, -160.1913, -496.6229" Heading="3.0" Sit="True"/>
+							<FishSpot XYZ="-278.9216, -159.8857, -482.6053" Heading="2.0" Sit="True"/>
 						</FishSpots>
 						<PatienceTugs>
-							<PatienceTug Mooch="0" TugType="Light"/>
+							<PatienceTug Mooch="0" TugType="Medium"/>
 						</PatienceTugs>
 					</ExFish>
 					<RunCode Name="EnableMount"/>
 
-				</While>	
+				</While>
 			</If>
-			
+
 			<If Condition="not HasAtLeast(30340,7) and HqHasAtLeast(31134,70)">
-				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>				
+				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
 				<RunCode Name="Sort"/>
 				<RunCode Name="TurnIn"/>
 			</If>
@@ -307,7 +313,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 				<LLSmallTalk/>
 			</If>
 		</If>
-		
+
 		<!-- Part 3 -->
 		
 		<While Condition="ClassName != ClassJobType.Fisher">
