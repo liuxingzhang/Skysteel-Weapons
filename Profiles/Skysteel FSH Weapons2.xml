@@ -369,8 +369,24 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 					</If>
 					<!--判断改良用零件是否数量足够，不够继续采集收藏品-->
 					<If Condition="not HasAtLeast(31748,200)">
-						<Lisbeth Json="[{'Group':1,'Item':31770,'Amount':10,'Enabled':true,'Type':'Fisher','Collectable':true}]"/> <!-- Flintstrike -->
+						<LisbethTravel Zone="402" Position="-794.7401, -37.25513, 625.4752"/>
 					</If>
+					<!--下坐骑-->
+					<RunCode Name="DisableMount"/>
+					<ExFish EnableKeeper="True" Stealth="true" Condition="HasAtLeast(30136,1) and not HqHasAtLeast(31770,20)" Mooch="0" Snagging="False" CordialType="Auto" MinFish="99" MaxFish="99" ShuffleFishSpots="false" Bait="Signature Skyball" Mount="False" Patience="Patience" MinimumGPPatience="400" Collectables="True" Collect="True" CollectabilityValue="10">
+						<Keepers>
+							<!--名称修改为中文-->
+							<Keeper Name="点火鱼"/>
+						</Keepers>
+						<FishSpots>
+							<FishSpot XYZ="-794.7401, -37.25513, 625.4752" Heading="3.0" Sit="True"/>
+							<FishSpot XYZ="-774.8076, -40.13294, 599.5053" Heading="2.0" Sit="True"/>
+						</FishSpots>
+						<PatienceTugs>
+							<PatienceTug Mooch="0" TugType="Medium"/>
+						</PatienceTugs>
+					</ExFish>
+					<RunCode Name="EnableMount"/>
 				</While>				
 				<While Condition="HasAtLeast(31749,200) and HasAtLeast(31748,200)"> <!-- Oddly Delicate Raising Hammer part -->
 				  <ChangeClass Job="Fisher" force="True"/>
