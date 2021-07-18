@@ -345,18 +345,32 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 			<While Condition="GetQuestStep(69519) == 255">
 				<If condition="not HasAtLeast(30136,500)">
 					<Lisbeth Json="[{'Group':1,'Item':30136,'Amount':999,'Enabled':true,'Type':'Purchase','AmountMode':'Restock'}]"/> <!-- Signature Skyball -->
-				</If>	
+				</If>
+				<!--装备天诗钓竿-->
+				<EquipWeapon ItemID="30303"/>
+				<!--判断背包零件数量-->
 				<While Condition="not HasAtLeast(31749,200)"> <!-- Oddly Delicate Fishing Reel Part -->
-					<EquipWeapon ItemID="30303"/>
-					<Lisbeth Json="[{'Group':1,'Item':31771,'Amount':10,'Enabled':true,'Type':'Fisher','Collectable':true}]"/> <!-- Pickled Pom -->					
-					<LisbethTravel Area="The Firmament" Position="-73.19273, -10, 172.5722"/>
-					<RunCode Name="TurnInOddly"/>
+					<!--判断背包是否有收藏品，有的话先去兑换-->
+					<If Condition="LLHasItemCollectable(31771)">
+						<LisbethTravel Area="The Firmament" Position="-73.19273, -10, 172.5722"/>
+						<RunCode Name="TurnInOddly"/>
+					</If>
+					<!--判断改良用零件是否数量足够，不够继续采集收藏品-->
+					<If Condition="not HasAtLeast(31749,200)">
+						<Lisbeth Json="[{'Group':1,'Item':31771,'Amount':10,'Enabled':true,'Type':'Fisher','Collectable':true}]"/> <!-- Pickled Pom -->
+					</If>
 				</While>
-				<While Condition="not HasAtLeast(31748,200)"> <!-- Oddly Delicate Fishing Rod Part -->		
-					<EquipWeapon ItemID="30303"/>
-					<Lisbeth Json="[{'Group':1,'Item':31770,'Amount':10,'Enabled':true,'Type':'Fisher','Collectable':true}]"/> <!-- Flintstrike -->					
-					<LisbethTravel Area="The Firmament" Position="-73.19273, -10, 172.5722"/>
-					<RunCode Name="TurnInOddly"/>
+				<!--判断背包零件数量-->
+				<While Condition="not HasAtLeast(31748,200)"> <!-- Oddly Delicate Fishing Rod Part -->
+					<!--判断背包是否有收藏品，有的话先去兑换-->
+					<If Condition="LLHasItemCollectable(31770)">
+						<LisbethTravel Area="The Firmament" Position="-73.19273, -10, 172.5722"/>
+						<RunCode Name="TurnInOddly"/>
+					</If>
+					<!--判断改良用零件是否数量足够，不够继续采集收藏品-->
+					<If Condition="not HasAtLeast(31748,200)">
+						<Lisbeth Json="[{'Group':1,'Item':31770,'Amount':10,'Enabled':true,'Type':'Fisher','Collectable':true}]"/> <!-- Flintstrike -->
+					</If>
 				</While>				
 				<While Condition="HasAtLeast(31749,200) and HasAtLeast(31748,200)"> <!-- Oddly Delicate Raising Hammer part -->
 				  <ChangeClass Job="Fisher" force="True"/>

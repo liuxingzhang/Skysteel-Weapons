@@ -15,6 +15,8 @@ FF14自动制作天钢工具脚本，原作者：Angles24 / Kayla。
 ## 2021.7.18
 更改捕鱼人第四阶段和第五阶段采集方式，不使用lisbeth (lisbeth会优先使用专一垂钓，导致HQ效率特别低)
 
+修复捕鱼人最终阶段采集收藏品10次后就提示所有订单已经完成的问题
+
 ## Setup
 **Note:** Any github repo can be updated through program like SVNTortoise or even Zimble's [repoBuddy](https://github.com/Zimgineering/repoBuddy) without the need to redownload.
 
