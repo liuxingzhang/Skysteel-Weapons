@@ -9,8 +9,11 @@ FF14自动制作天钢工具脚本，原作者：Angles24 / Kayla。
 
 ## 2021.7.17
 修复捕鱼人第二阶段和第三阶段时无法购买天钢之球的问题
+
 适配捕鱼人第二阶段和第三阶段采集道具名称为中文
 
+## 2021.7.18
+更改捕鱼人第四阶段和第五阶段采集方式，不使用lisbeth (lisbeth会优先使用专一垂钓，导致HQ效率特别低)
 
 ## Setup
 **Note:** Any github repo can be updated through program like SVNTortoise or even Zimble's [repoBuddy](https://github.com/Zimgineering/repoBuddy) without the need to redownload.
