@@ -133,7 +133,7 @@ Required: LLamaLibrary BotBase
 				<RunCode Name="TurnIn"/>
 			</If>	
 			<If Condition="not HasAtLeast(30323,90)"> <!-- Leatherworker's Gobbiegoo -->
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31105,'Amount':18,'Enabled':true,'Type':'Leatherworker'}]"/>
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31105,'Amount':18,'Enabled':true,'Type':'Leatherworker','Food':1030482,'Medicine':1027959}]"/>
 			</If>
 			<If Condition="LLHasItemCollectable(31105)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
@@ -156,7 +156,7 @@ Required: LLamaLibrary BotBase
 				<RunCode Name="TurnIn"/>
 			</If>
 			<If Condition="not HasAtLeast(30324,105)"> <!-- Highly Viscous Leatherworker's Gobbiegoo -->
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31113,'Amount':21,'Enabled':true,'Type':'Leatherworker'}]"/>
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31113,'Amount':25,'Enabled':true,'Type':'Leatherworker','Food':1030482,'Medicine':1027959}]"/>
 			</If>	
 			<If Condition="LLHasItemCollectable(31113)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
@@ -223,7 +223,7 @@ Required: LLamaLibrary BotBase
 					</If>
 					<!-- 制作收藏品 -->
 					<If Condition="not HasAtLeast(31740,60)">
-						<Lisbeth IgnoreHome="True" Json="[{'Group':1,'Item':31754,'Amount':5,'Enabled':true,'Type':'Leatherworker','Collectable':true,'AmountMode':'Restock'}]"/> <!-- Oddly Delicate Gazelle Leather -->
+						<Lisbeth IgnoreHome="True" Json="[{'Group':1,'Item':31754,'Amount':5,'Enabled':true,'Type':'Leatherworker','Collectable':true,'AmountMode':'Restock','Food':1030482,'Medicine':1027959}]"/> <!-- Oddly Delicate Gazelle Leather -->
 					</If>
 				</While>
 

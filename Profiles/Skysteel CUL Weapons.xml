@@ -133,7 +133,7 @@ Required: LLamaLibrary BotBase
 				<RunCode Name="TurnIn"/>
 			</If>	
 			<If Condition="not HasAtLeast(30329,90)"> <!-- Culinarian's Gobbiegoo -->
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31108,'Amount':18,'Enabled':true,'Type':'Culinarian'}]"/>
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31108,'Amount':18,'Enabled':true,'Type':'Culinarian','Food':1030482,'Medicine':1027959}]"/>
 			</If>
 			<If Condition="LLHasItemCollectable(31108)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
@@ -156,7 +156,7 @@ Required: LLamaLibrary BotBase
 				<RunCode Name="TurnIn"/>
 			</If>
 			<If Condition="not HasAtLeast(30330,105)"> <!-- Highly Viscous Culinarian's Gobbiegoo -->
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31116,'Amount':21,'Enabled':true,'Type':'Culinarian'}]"/>
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31116,'Amount':25,'Enabled':true,'Type':'Culinarian','Food':1030482,'Medicine':1027959}]"/>
 			</If>	
 			<If Condition="LLHasItemCollectable(31116)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
@@ -222,7 +222,7 @@ Required: LLamaLibrary BotBase
 					</If>
 					<!-- 制作收藏品 -->
 					<If Condition="not HasAtLeast(31743,60)">
-						<Lisbeth IgnoreHome="True" Json="[{'Group':1,'Item':31757,'Amount':5,'Enabled':true,'Type':'Culinarian','Collectable':true, 'AmountMode':'Restock'}]"/> <!-- Oddly Delicate Shark Oil -->
+						<Lisbeth IgnoreHome="True" Json="[{'Group':1,'Item':31757,'Amount':5,'Enabled':true,'Type':'Culinarian','Collectable':true, 'AmountMode':'Restock','Food':1030482,'Medicine':1027959}]"/> <!-- Oddly Delicate Shark Oil -->
 					</If>
 				</While>
 

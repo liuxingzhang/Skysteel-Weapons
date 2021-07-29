@@ -2,6 +2,8 @@
 FF14自动制作天钢工具脚本，原作者：Angles24 / Kayla。
 修复了一些自己在国服(CN)使用过程中遇到的问题
 
+生产收藏品默认使用魔匠药水和辣酱炒全蟹
+
 [作者项目地址](https://github.com/Angles24/DoH-DoL-Profiles/tree/master/Skysteel%20Weapons)
 
 ## 2021.7.16

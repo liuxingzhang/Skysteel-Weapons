@@ -133,7 +133,7 @@ Required: LLamaLibrary BotBase
 				<RunCode Name="TurnIn"/>
 			</If>	
 			<If Condition="not HasAtLeast(30321,90)"> <!-- Goldsmith's Gobbiegoo -->
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31104,'Amount':18,'Enabled':true,'Type':'Goldsmith'}]"/>
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31104,'Amount':18,'Enabled':true,'Type':'Goldsmith','Food':1030482,'Medicine':1027959}]"/>
 			</If>
 			<If Condition="LLHasItemCollectable(31104)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
@@ -156,7 +156,7 @@ Required: LLamaLibrary BotBase
 				<RunCode Name="TurnIn"/>
 			</If>
 			<If Condition="not HasAtLeast(30322,105)"> <!-- Highly Viscous Goldsmith's Gobbiegoo -->
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31112,'Amount':21,'Enabled':true,'Type':'Goldsmith'}]"/>
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31112,'Amount':25,'Enabled':true,'Type':'Goldsmith','Food':1030482,'Medicine':1027959}]"/>
 			</If>	
 			<If Condition="LLHasItemCollectable(31112)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
@@ -223,7 +223,7 @@ Required: LLamaLibrary BotBase
 					</If>
 					<!-- 制作收藏品 -->
 					<If Condition="not HasAtLeast(31739,60)">
-						<Lisbeth IgnoreHome="True" Json="[{'Group':1,'Item':31753,'Amount':5,'Enabled':true,'Type':'Goldsmith','Collectable':true,'AmountMode':'Restock'}]"/> <!-- Oddly Delicate Celestine -->
+						<Lisbeth IgnoreHome="True" Json="[{'Group':1,'Item':31753,'Amount':5,'Enabled':true,'Type':'Goldsmith','Collectable':true,'AmountMode':'Restock','Food':1030482,'Medicine':1027959}]"/> <!-- Oddly Delicate Celestine -->
 					</If>
 				</While>
 

@@ -133,7 +133,7 @@ Required: LLamaLibrary BotBase
 				<RunCode Name="TurnIn"/>
 			</If>	
 			<If Condition="not HasAtLeast(30325,90)"> <!-- Weaver's Gobbiegoo -->
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31106,'Amount':18,'Enabled':true,'Type':'Weaver'}]"/>
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31106,'Amount':18,'Enabled':true,'Type':'Weaver', 'Food':1030482,'Medicine':1027959}]"/>
 			</If>
 			<If Condition="LLHasItemCollectable(31106)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
@@ -156,7 +156,7 @@ Required: LLamaLibrary BotBase
 				<RunCode Name="TurnIn"/>
 			</If>
 			<If Condition="not HasAtLeast(30326,105)"> <!-- Highly Viscous Weaver's Gobbiegoo -->
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31114,'Amount':21,'Enabled':true,'Type':'Weaver'}]"/>
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31114,'Amount':25,'Enabled':true,'Type':'Weaver','Food':1030482,'Medicine':1027959}]"/>
 			</If>	
 			<If Condition="LLHasItemCollectable(31114)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
@@ -223,7 +223,7 @@ Required: LLamaLibrary BotBase
 					</If>
 					<!-- 制作收藏品 -->
 					<If Condition="not HasAtLeast(31741,60)">
-						<Lisbeth IgnoreHome="True" Json="[{'Group':1,'Item':31755,'Amount':5,'Enabled':true,'Type':'Weaver','Collectable':true,'AmountMode':'Restock'}]"/> <!-- Oddly Delicate Rhea Cloth -->
+						<Lisbeth IgnoreHome="True" Json="[{'Group':1,'Item':31755,'Amount':5,'Enabled':true,'Type':'Weaver','Collectable':true,'AmountMode':'Restock','Food':1030482,'Medicine':1027959}]"/> <!-- Oddly Delicate Rhea Cloth -->
 					</If>
 				</While>
 

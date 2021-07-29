@@ -133,7 +133,7 @@ Required: LLamaLibrary BotBase
 				<RunCode Name="TurnIn"/>
 			</If>	
 			<If Condition="not HasAtLeast(30315,90)"> <!-- Carpenter's Gobbiegoo -->
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31101,'Amount':18,'Enabled':true,'Type':'Carpenter'}]"/>
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31101,'Amount':18,'Enabled':true,'Type':'Carpenter', 'Food':1030482,'Medicine':1027959}]"/>
 			</If>
 			<If Condition="LLHasItemCollectable(31101)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
@@ -156,7 +156,7 @@ Required: LLamaLibrary BotBase
 				<RunCode Name="TurnIn"/>
 			</If>
 			<If Condition="not HasAtLeast(30316,105)"> <!-- Highly Viscous Carpenter's Gobbiegoo -->
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31109,'Amount':21,'Enabled':true,'Type':'Carpenter'}]"/>
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31109,'Amount':25,'Enabled':true,'Type':'Carpenter','Food':1030482,'Medicine':1027959}]"/>
 			</If>	
 			<If Condition="LLHasItemCollectable(31109)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
@@ -222,7 +222,7 @@ Required: LLamaLibrary BotBase
 					</If>
 					<!-- 制作收藏品 -->
 					<If Condition="not HasAtLeast(31736,60)">
-						<Lisbeth Json="[{'Group':1,'Item':31750,'Amount':5,'Enabled':true,'Type':'Carpenter','Collectable':true, 'AmountMode':'Restock'}]"/> <!-- Oddly Delicate Pine Lumber -->
+						<Lisbeth Json="[{'Group':1,'Item':31750,'Amount':5,'Enabled':true,'Type':'Carpenter','Collectable':true, 'AmountMode':'Restock','Food':1030482,'Medicine':1027959}]"/> <!-- Oddly Delicate Pine Lumber -->
 					</If>
 				</While>
 
