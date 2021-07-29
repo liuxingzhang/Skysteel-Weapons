@@ -133,7 +133,7 @@ Required: LLamaLibrary BotBase
 				<RunCode Name="TurnIn"/>
 			</If>
 			<If Condition="not HasAtLeast(30327,90)"> <!-- Alchemist's Gobbiegoo -->
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31107,'Amount':30,'Enabled':true,'Type':'Alchemist'}]"/>
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31107,'Amount':18,'Enabled':true,'Type':'Alchemist'}]"/>
 			</If>
 			<If Condition="LLHasItemCollectable(31107)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
@@ -156,7 +156,7 @@ Required: LLamaLibrary BotBase
 				<RunCode Name="TurnIn"/>
 			</If>
 			<If Condition="not HasAtLeast(30328,105)"> <!-- Highly Viscous Alchemist's Gobbiegoo -->
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31115,'Amount':30,'Enabled':true,'Type':'Alchemist'}]"/>
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31115,'Amount':21,'Enabled':true,'Type':'Alchemist'}]"/>
 			</If>
 			<If Condition="LLHasItemCollectable(31115)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
@@ -229,6 +229,7 @@ Required: LLamaLibrary BotBase
 
 				<While Condition="HasAtLeast(31742,60)"> <!-- Oddly Delicate Alembic Part -->
 				  <ChangeClass Job="Alchemist" force="True"/>
+					<!-- 购买装备
 					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 30299">
 						<Log Message="Skysung Tool equipped, going to purchase differnt tool." />
 						<LisbethTravel Area="Central Thanalan" Position="-10.76859, -2.04808, -149.7865"/>
@@ -236,6 +237,9 @@ Required: LLamaLibrary BotBase
 						<EquipWeapon ItemID="2468"/>
 						<WaitTimer WaitTime="3" />
 					</While>
+					-->
+
+					<EquipWeapon ItemID="30446"/>
 				  <LisbethTravel Zone="886" Subzone="3526" Position="-74.0461, -10, 168.7935"/>
 				  <LLTurnIn QuestId="69519" NpcId="1035012" XYZ="-72.67877, -10, 169.1157"/>
 				  <LLSmallTalk/>

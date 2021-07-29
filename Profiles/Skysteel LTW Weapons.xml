@@ -133,7 +133,7 @@ Required: LLamaLibrary BotBase
 				<RunCode Name="TurnIn"/>
 			</If>	
 			<If Condition="not HasAtLeast(30323,90)"> <!-- Leatherworker's Gobbiegoo -->
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31105,'Amount':30,'Enabled':true,'Type':'Leatherworker'}]"/>
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31105,'Amount':18,'Enabled':true,'Type':'Leatherworker'}]"/>
 			</If>
 			<If Condition="LLHasItemCollectable(31105)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
@@ -156,7 +156,7 @@ Required: LLamaLibrary BotBase
 				<RunCode Name="TurnIn"/>
 			</If>
 			<If Condition="not HasAtLeast(30324,105)"> <!-- Highly Viscous Leatherworker's Gobbiegoo -->
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31113,'Amount':30,'Enabled':true,'Type':'Leatherworker'}]"/>
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31113,'Amount':21,'Enabled':true,'Type':'Leatherworker'}]"/>
 			</If>	
 			<If Condition="LLHasItemCollectable(31113)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
@@ -229,13 +229,7 @@ Required: LLamaLibrary BotBase
 
 				<While Condition="HasAtLeast(31740,60)"> <!-- Oddly Delicate Round Knife Part -->
 				  <ChangeClass Job="Weaver" force="True"/>
-					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 30297">
-						<Log Message="Skysung Tool equipped, going to purchase differnt tool." />
-						<LisbethTravel Area="North Shroud" Position="332.9388, -5.550671, 330.6815"/>
-						<BuyItem NpcId="1000718" ItemId="2417" ItemCount="1" DialogOption="1" XYZ="332.2346,-5.550671,332.4788"/>
-						<EquipWeapon ItemID="2417"/>
-						<WaitTimer WaitTime="3" />
-					</While>				  
+					<EquipWeapon ItemID="30444"/>
 				  <LisbethTravel Zone="886" Subzone="3526" Position="-74.0461, -10, 168.7935"/>
 				  <LLTurnIn QuestId="69519" NpcId="1035012" XYZ="-72.67877, -10, 169.1157"/>
 				  <LLSmallTalk/>				  

@@ -133,7 +133,7 @@ Required: LLamaLibrary BotBase
 				<RunCode Name="TurnIn"/>
 			</If>
 			<If Condition="not HasAtLeast(30317,90)"> <!-- Blacksmith's Gobbiegoo -->
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31102,'Amount':30,'Enabled':true,'Type':'Blacksmith'}]"/>
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31102,'Amount':18,'Enabled':true,'Type':'Blacksmith'}]"/>
 			</If>
 			<If Condition="LLHasItemCollectable(31102)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
@@ -156,7 +156,7 @@ Required: LLamaLibrary BotBase
 				<RunCode Name="TurnIn"/>
 			</If>
 			<If Condition="not HasAtLeast(30318,105)"> <!-- Highly Viscous Blacksmith's Gobbiegoo -->
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31110,'Amount':30,'Enabled':true,'Type':'Blacksmith'}]"/>
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31110,'Amount':21,'Enabled':true,'Type':'Blacksmith'}]"/>
 			</If>
 			<If Condition="LLHasItemCollectable(31110)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
@@ -228,6 +228,7 @@ Required: LLamaLibrary BotBase
 				</While>
 				<While Condition="HasAtLeast(31737,60)"> <!-- Oddly Delicate Cross-pein Hammer part -->
 					<ChangeClass Job="Blacksmith" force="True"/>
+					<!-->
 					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 30294">
 						<Log Message="Skysung Tool equipped, going to purchase differnt tool." />
 						<LisbethTravel Area="Middle La Noscea" Position="200.0367, 98.50204, -205.0951"/>
@@ -235,6 +236,8 @@ Required: LLamaLibrary BotBase
 						<EquipWeapon ItemID="2341"/>
 						<WaitTimer WaitTime="3" />
 					</While>
+					-->
+					<EquipWeapon ItemID="30441"/>
 					<LisbethTravel Zone="886" Subzone="3526" Position="-74.0461, -10, 168.7935"/>
 					<LLTurnIn QuestId="69519" NpcId="1035012" XYZ="-72.67877, -10, 169.1157"/>
 					<LLSmallTalk/>
