@@ -47,7 +47,7 @@ Required: LLamaLibrary BotBase
 		
 		<If Condition="not (HasItem(29617) or HasItem(29628) or HasItem(29639) or HasItem(29639) or HasItem(30287) or HasItem(30298) or HasItem(31719))">
 			<GetTo ZoneId="418" XYZ="-161.5168, 16.99999, -57.14508"/>
-			<BuyItem ItemId="29617" ItemCount="1" DialogOption="2" NpcId="1032900" XYZ="-161.5168, 16.99999, -57.14508"/>
+			<BuyItem ItemId="29617" ItemCount="1" DialogOption="4" NpcId="1032900" XYZ="-161.5168, 16.99999, -57.14508"/>
 		</If>
 		
 		<While Condition="HasItem(29617)"><!-- Skysteel Needle -->

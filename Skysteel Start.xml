@@ -16,9 +16,9 @@ Required: LLamaLibrary BotBase
 <!ENTITY gsm "1">
 <!ENTITY ltw "1">
 <!ENTITY wvr "1">
-<!ENTITY btn "1">
-<!ENTITY min "1">
-<!ENTITY fsh "1">
+<!ENTITY btn "0">
+<!ENTITY min "0">
+<!ENTITY fsh "0">
 ]>
 <Profile>
 	<Name>Skysteel Start</Name>
