@@ -85,6 +85,8 @@ Required: LLamaLibrary BotBase
 				<BuyShopExchangeItem NpcId="1032900" ItemId="29635" SelectString="1"/><!-- Buy Dragonsung Cross-pein Hammer -->
 				<WaitTimer WaitTime="3"/>
 				<RunCode Name="CloseShop"/>
+				<WaitTimer WaitTime="3"/>
+				<RunCode Name="CloseShop"/>
 			</If>
 		</While>
 
@@ -156,7 +158,7 @@ Required: LLamaLibrary BotBase
 				<RunCode Name="TurnIn"/>
 			</If>
 			<If Condition="not HasAtLeast(30318,105)"> <!-- Highly Viscous Blacksmith's Gobbiegoo -->
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31110,'Amount':25,'Enabled':true,'Type':'Blacksmith','Food':1030482,'Medicine':1027959}]"/>
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31110,'Amount':21,'Enabled':true,'Type':'Blacksmith','Food':1030482,'Medicine':1027959}]"/>
 			</If>
 			<If Condition="LLHasItemCollectable(31110)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
@@ -249,7 +251,7 @@ Required: LLamaLibrary BotBase
 		<If Condition="HasItem(31715)">
 			<EquipWeapon ItemID="31715"/>
 			<AutoEquip UpdateGearSet="true"/>
-			<LLSellItem ItemIds="31737,31751,31996,31999"/>
+			<!--<LLSellItem ItemIds="31737,31751,31996,31999"/>-->
 		</If>
 
 		<If Condition="HasItem(31715) and not IsQuestCompleted(69520)"><!-- Skybuilders' Cross-pein Hammer -->

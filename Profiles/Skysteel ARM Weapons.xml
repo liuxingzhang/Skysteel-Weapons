@@ -85,6 +85,8 @@ Required: LLamaLibrary BotBase
 				<BuyShopExchangeItem NpcId="1032900" ItemId="29636" SelectString="1"/><!-- Buy Dragonsung Raising Hammer -->
 				<WaitTimer WaitTime="3"/>
 				<RunCode Name="CloseShop"/>
+				<WaitTimer WaitTime="3"/>
+				<RunCode Name="CloseShop"/>
 			</If>
 		</While>
 		
@@ -156,7 +158,7 @@ Required: LLamaLibrary BotBase
 				<RunCode Name="TurnIn"/>
 			</If>
 			<If Condition="not HasAtLeast(30320,105)"> <!-- Highly Viscous Armorer's Gobbiegoo -->
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31111,'Amount':25,'Enabled':true,'Type':'Armorer','Food':1030482,'Medicine':1027959}]"/>
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31111,'Amount':21,'Enabled':true,'Type':'Armorer','Food':1030482,'Medicine':1027959}]"/>
 			</If>	
 			<If Condition="LLHasItemCollectable(31111)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
@@ -239,7 +241,7 @@ Required: LLamaLibrary BotBase
 		<If Condition="HasItem(31716)">
 			<EquipWeapon ItemID="31716"/>
 			<AutoEquip UpdateGearSet="true"/>
-			<LLSellItem ItemIds="32000,31996,31752,31738"/>
+			<!--<LLSellItem ItemIds="32000,31996,31752,31738"/>-->
 		</If>		
 
 		<If Condition="HasItem(31716) and not IsQuestCompleted(69520)"><!-- Skybuilders' Raising Hammer -->

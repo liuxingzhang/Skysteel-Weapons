@@ -85,6 +85,8 @@ Required: LLamaLibrary BotBase
 				<BuyShopExchangeItem NpcId="1032900" ItemId="29639" SelectString="1"/><!-- Buy Dragonsung Needle -->
 				<WaitTimer WaitTime="3"/>
 				<RunCode Name="CloseShop"/>
+				<WaitTimer WaitTime="3"/>
+				<RunCode Name="CloseShop"/>
 			</If>
 		</While>
 		
@@ -156,7 +158,7 @@ Required: LLamaLibrary BotBase
 				<RunCode Name="TurnIn"/>
 			</If>
 			<If Condition="not HasAtLeast(30326,105)"> <!-- Highly Viscous Weaver's Gobbiegoo -->
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31114,'Amount':25,'Enabled':true,'Type':'Weaver','Food':1030482,'Medicine':1027959}]"/>
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31114,'Amount':21,'Enabled':true,'Type':'Weaver','Food':1030482,'Medicine':1027959}]"/>
 			</If>	
 			<If Condition="LLHasItemCollectable(31114)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
@@ -240,7 +242,7 @@ Required: LLamaLibrary BotBase
 		<If Condition="HasItem(31719)">
 			<EquipWeapon ItemID="31719"/>
 			<AutoEquip UpdateGearSet="true"/>
-			<LLSellItem ItemIds="31741,31755,31991,31993"/>
+			<!--<LLSellItem ItemIds="31741,31755,31991,31993"/>-->
 		</If>		
 
 		<If Condition="HasItem(31719)"><!-- Skybuilders' Needle -->

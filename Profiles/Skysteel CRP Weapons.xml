@@ -85,6 +85,8 @@ Required: LLamaLibrary BotBase
 				<BuyShopExchangeItem NpcId="1032900" ItemId="29634" SelectString="1"/><!-- Buy Dragonsung Saw -->
 				<WaitTimer WaitTime="3"/>
 				<RunCode Name="CloseShop"/>
+				<WaitTimer WaitTime="3"/>
+				<RunCode Name="CloseShop"/>
 			</While>
 		</While>
 		
@@ -156,7 +158,7 @@ Required: LLamaLibrary BotBase
 				<RunCode Name="TurnIn"/>
 			</If>
 			<If Condition="not HasAtLeast(30316,105)"> <!-- Highly Viscous Carpenter's Gobbiegoo -->
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31109,'Amount':25,'Enabled':true,'Type':'Carpenter','Food':1030482,'Medicine':1027959}]"/>
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31109,'Amount':21,'Enabled':true,'Type':'Carpenter','Food':1030482,'Medicine':1027959}]"/>
 			</If>	
 			<If Condition="LLHasItemCollectable(31109)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
@@ -248,7 +250,7 @@ Required: LLamaLibrary BotBase
 		<If Condition="HasItem(31714)">
 			<EquipWeapon ItemID="31714"/>
 			<AutoEquip UpdateGearSet="true"/>
-			<LLSellItem ItemIds="31750,31736,31991,31995"/>
+			<!--<LLSellItem ItemIds="31750,31736,31991,31995"/>-->
 		</If>			
 
 		<If Condition="HasItem(31714) and not IsQuestCompleted(69520)"><!-- Skybuilders' Saw -->

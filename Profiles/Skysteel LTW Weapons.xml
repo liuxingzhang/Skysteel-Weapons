@@ -85,6 +85,8 @@ Required: LLamaLibrary BotBase
 				<BuyShopExchangeItem NpcId="1032900" ItemId="29638" SelectString="1"/><!-- Buy Dragonsung Round Knife -->
 				<WaitTimer WaitTime="3"/>
 				<RunCode Name="CloseShop"/>
+				<WaitTimer WaitTime="3"/>
+				<RunCode Name="CloseShop"/>
 			</If>
 		</While>
 		
@@ -156,7 +158,7 @@ Required: LLamaLibrary BotBase
 				<RunCode Name="TurnIn"/>
 			</If>
 			<If Condition="not HasAtLeast(30324,105)"> <!-- Highly Viscous Leatherworker's Gobbiegoo -->
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31113,'Amount':25,'Enabled':true,'Type':'Leatherworker','Food':1030482,'Medicine':1027959}]"/>
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31113,'Amount':21,'Enabled':true,'Type':'Leatherworker','Food':1030482,'Medicine':1027959}]"/>
 			</If>	
 			<If Condition="LLHasItemCollectable(31113)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
@@ -240,7 +242,7 @@ Required: LLamaLibrary BotBase
 		<If Condition="HasItem(31718)">
 			<EquipWeapon ItemID="31718"/>
 			<AutoEquip UpdateGearSet="true"/>
-			<LLSellItem ItemIds="31740,31754,31991,31993"/>
+			<!--<LLSellItem ItemIds="31740,31754,31991,31993"/>-->
 		</If>		
 
 		<If Condition="HasItem(31718) and not IsQuestCompleted(69520)"><!-- Skybuilders' Round Knife -->
