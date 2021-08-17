@@ -233,7 +233,7 @@ Required: LLamaLibrary BotBase
 				  <ChangeClass Job="Goldsmith" force="True"/>
 
 					<!--没有490HQ，购买新手装备-->
-					<if Condition="not HasItem(30443)">
+					<If Condition="not HasItem(30443)">
 						<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 30296">
 							<Log Message="Skysung Tool equipped, going to purchase differnt tool." />
 							<LisbethTravel Area="Central Thanalan" Position="-10.76859, -2.04808, -149.7865"/>
@@ -241,12 +241,12 @@ Required: LLamaLibrary BotBase
 							<EquipWeapon ItemID="2392"/>
 							<WaitTimer WaitTime="3" />
 						</While>
-					</if>
+					</If>
 
 					<!--有490HQ主手优先装备490HQ-->
-					<if Condition="HasItem(30443)">
+					<If Condition="HasItem(30443)">
 						<EquipWeapon ItemID="30443"/>
-					</if>
+					</If>
 
 				  <LisbethTravel Zone="886" Subzone="3526" Position="-74.0461, -10, 168.7935"/>
 				  <LLTurnIn QuestId="69519" NpcId="1035012" XYZ="-72.67877, -10, 169.1157"/>

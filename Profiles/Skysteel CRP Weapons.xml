@@ -232,7 +232,7 @@ Required: LLamaLibrary BotBase
 				  <ChangeClass Job="Carpenter" force="True"/>
 
 					<!--没有490HQ，购买新手装备-->
-					<if Condition="not HasItem(30440)">
+					<If Condition="not HasItem(30440)">
 						<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 30293">
 							<Log Message="Skysung Tool equipped, going to purchase differnt tool." />
 							<LisbethTravel Area="North Shroud" Position="332.9388, -5.550671, 330.6815"/>
@@ -240,12 +240,12 @@ Required: LLamaLibrary BotBase
 							<EquipWeapon ItemID="2315"/>
 							<WaitTimer WaitTime="3" />
 						</While>
-					</if>
+					</If>
 
 					<!--有490HQ主手优先装备490HQ-->
-					<if Condition="HasItem(30440)">
+					<If Condition="HasItem(30440)">
 						<EquipWeapon ItemID="30440"/>
-					</if>
+					</If>
 
 				  <LisbethTravel Zone="886" Subzone="3526" Position="-74.0461, -10, 168.7935"/>
 				  <LLTurnIn QuestId="69519" NpcId="1035012" XYZ="-72.67877, -10, 169.1157"/>

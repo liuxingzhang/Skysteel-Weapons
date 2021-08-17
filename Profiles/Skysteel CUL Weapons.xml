@@ -232,7 +232,7 @@ Required: LLamaLibrary BotBase
 				  <ChangeClass Job="Culinarian" force="True"/>
 
 					<!--没有490HQ，购买新手装备-->
-					<if Condition="not HasItem(30447)">
+					<If Condition="not HasItem(30447)">
 						<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 30300">
 							<Log Message="Skysung Tool equipped, going to purchase differnt tool." />
 							<LisbethTravel Area="Middle La Noscea" Position="200.0367, 98.50204, -205.0951"/>
@@ -240,12 +240,12 @@ Required: LLamaLibrary BotBase
 							<EquipWeapon ItemID="2494"/>
 							<WaitTimer WaitTime="3" />
 						</While>
-					</if>
+					</If>
 
 					<!--有490HQ主手优先装备490HQ-->
-					<if Condition="HasItem(30447)">
+					<If Condition="HasItem(30447)">
 						<EquipWeapon ItemID="30447"/>
-					</if>
+					</If>
 
 				  <LisbethTravel Zone="886" Subzone="3526" Position="-74.0461, -10, 168.7935"/>
 				  <LLTurnIn QuestId="69519" NpcId="1035012" XYZ="-72.67877, -10, 169.1157"/>
