@@ -1,0 +1,271 @@
+Name: 500-510 Craftsmanship 2803 Control 2826 CP626
+Type: Craft
+Enabled: True
+Conditions: ()
+Cost: 0
+
+S0:
+- Reflect
+
+S1C:
+=> S4C (InnerQuietAura >= 10 && Progress >= 9475)
+=> S1Good (IsGood == True)
+=> S1Pliant (IsPliant == True)
+=> S1Centered (IsCentered == True)
+=> S1Sturdy (IsSturdy == True)
+=> S1
+
+S1Good:
+- (WasteNot2Aura > 0 && Durability > 5 && Cp >= 117) Precise Touch | (WasteNotAura > 0 && Durability > 5 && Cp >= 117) Precise Touch | (ManipulationAura > 0 && Durability == 60 && Cp >= 117) Precise Touch | (InnerQuietAura < 11 && Durability > 10 && Cp >= 117) Precise Touch | (InnerQuietAura == 11 && Cp <= 606) Tricks of the Trade | (Durability > 10 && Cp >= 117) Precise Touch | (Cp < 606) Tricks of the Trade | (Durability <= 5) Tricks of the Trade | (WasteNot2Aura == 0 && WasteNotAura == 0 && Durability <= 10 && Durability > 5) Prudent Touch | (Durability > 10 && Cp >= 117) Precise Touch
+=> S4C (InnerQuietAura >= 10 && Progress >= 9475)
+=> S1C
+
+S1Pliant:
+- (Durability <= 20 && Cp >= 143) Master's Mend | (ManipulationAura <= 2 && Cp >= 161) Manipulation | (WasteNotAura == 0 && WasteNot2Aura == 0 && EffectiveDurabilityRemaining > 35 && Cp >= 159 && InnerQuietAura < 6) Waste Not II | (WasteNotAura == 0 && WasteNot2Aura == 0 && Progress < 4790 && EffectiveDurabilityRemaining > 35 && Cp >= 159) Waste Not II | (WasteNotAura == 0 && WasteNot2Aura == 0 && EffectiveDurabilityRemaining > 20 && Cp >= 159 && InnerQuietAura < 8) Waste Not | (WasteNot2Aura == 0 && WasteNotAura == 0 && Progress < 7185 && EffectiveDurabilityRemaining > 20 && Cp >= 159) Waste Not | (WasteNot2Aura > 0 && Durability > 10 && Cp >= 119) Preparatory Touch | (WasteNot2Aura > 0 && Durability > 5 && Cp >= 108) Basic Touch | (WasteNotAura > 0 && Durability > 10 && Cp >= 119) Preparatory Touch | (WasteNotAura > 0 && Durability > 5 && Cp >= 108) Basic Touch  | (WasteNotAura == 0 && WasteNot2Aura == 0 && Durability > 5) Prudent Touch
+=> S4C (InnerQuietAura >= 10 && Progress >= 9475)
+=> S1C
+
+S1Centered:
+- (Durability > 10 && InnerQuietAura >= 3 && InnerQuietAura <= 6) Patient Touch | (WasteNotAura > 0 && Durability > 5 && InnerQuietAura >= 3 && InnerQuietAura <= 6) Patient Touch | (WasteNot2Aura > 0 && Durability > 5 && InnerQuietAura >= 3 && InnerQuietAura <= 6) Patient Touch | (Durability > 10 && Progress < 9475) Rapid Synthesis | (WasteNotAura > 0 && Durability > 5 && Progress < 9475) Rapid Synthesis | (WasteNot2Aura > 0 && Durability > 5 && Progress < 9475) Rapid Synthesis | (WasteNotAura > 0 && Durability > 5) Hasty Touch | (Durability > 10) Hasty Touch | (WasteNot2Aura > 0 && Durability > 5) Hasty Touch | (ManipulationAura < 2 && Durability <= 10 && Cp >= 187) Master's Mend | (Durability <= 30 && ManipulationAura == 0 && VenerationAura == 0 && WasteNot2Aura == 0 && WasteNotAura == 0 && Cp >= 209) Manipulation | Observe
+=> S4C (InnerQuietAura >= 10 && Progress >= 9475)
+=> S1C
+
+S1Sturdy:
+-  (Durability > 5 && Progress < 9475) Rapid Synthesis | (WasteNotAura > 0 && Durability > 3 && Progress < 9475) Rapid Synthesis | (WasteNot2Aura > 0 && Durability > 3 && Progress < 9475) Rapid Synthesis | (WasteNot2Aura > 0 && Durability > 3 && Progress > 9475 && InnerQuietAura < 11) Hasty Touch | (WasteNotAura > 0 && Durability > 3 && Progress > 9475 && InnerQuietAura < 11) Hasty Touch | (Durability > 5 && Progress > 9475 && InnerQuietAura < 11) Hasty Touch | (ManipulationAura < 2 && Durability <= 5 && Cp >= 187) Master's Mend | (Durability <= 30 && ManipulationAura == 0 && VenerationAura == 0 && WasteNot2Aura == 0 && WasteNotAura == 0 && Cp >= 209) Manipulation | (WasteNot2Aura > 0 && Durability > 3 && Progress > 9475) Hasty Touch | (WasteNotAura > 0 && Durability > 3 && Progress > 9475) Hasty Touch | (Durability > 5 && Progress > 9475) Hasty Touch | Observe
+=> S4C (InnerQuietAura >= 10 && Progress >= 9475)
+=> S1C
+
+S1:
+- (ManipulationAura < 2 && Durability <= 10 && Cp >= 187) Master's Mend | (Durability <= 30 && ManipulationAura == 0 && VenerationAura == 0 && WasteNotAura == 0 && WasteNot2Aura == 0 && Cp >= 209) Manipulation | (Durability <= 15 && ManipulationAura > 0 && WasteNot2Aura == 0 && WasteNotAura == 0) Observe | (Durability > 10 && Progress < 9475) Rapid Synthesis | (WasteNotAura > 0 && Durability > 5 && Progress < 9475) Rapid Synthesis | (WasteNot2Aura > 0 && Durability > 5 && Progress < 9475) Rapid Synthesis | (WasteNot2Aura > 0 && Durability > 5) Hasty Touch | (WasteNotAura > 0 && Durability > 5) Hasty Touch | (Durability > 10) Hasty Touch | Observe
+=> S4C (InnerQuietAura >= 10 && Progress >= 9475)
+=> S1C
+
+S4C:
+=> S5 (Quality >= 39124 && EffectiveDurabilityRemaining > 20 && Progress >= 9475)
+=> S5A (Quality > 35143 && Cp >= 131 && EffectiveDurabilityRemaining > 20 && Progress >= 9475)
+=> S5A (Quality > 35143 && Cp >= 115 && EffectiveDurabilityRemaining > 20 && Progress >= 9475 && IsPliant == True)
+=> S5 (Quality >= 39124 && Cp >= 99 && EffectiveDurabilityRemaining > 20 && Progress >= 9475)
+=> S5B (Quality > 32489 && Cp >= 156 && EffectiveDurabilityRemaining > 25 && EffectiveDurabilityRemaining <= 30 && WasteNotAura < 1 && WasteNot2Aura < 1 && Progress >= 9475)
+=> S5B (Quality > 32489 && Cp >= 144 && EffectiveDurabilityRemaining > 25 && EffectiveDurabilityRemaining <= 30 && WasteNotAura < 1 && WasteNot2Aura < 1 && Progress >= 9475 && IsPliant == True)
+=> S5C (Quality > 31825 && Cp >= 202 && EffectiveDurabilityRemaining > 15 && Durability >= 1 && Progress >= 9475)
+=> S5C (Quality > 31825 && Cp >= 186 && EffectiveDurabilityRemaining > 15 && Durability >= 1 && Progress >= 9475 && IsPliant == True)
+=> S5D (Quality > 31825 && Cp >= 146 && EffectiveDurabilityRemaining > 30 && Durability >= 11 && Progress >= 9475)
+=> S5D (Quality > 31825 && Cp >= 130 && EffectiveDurabilityRemaining > 30 && Durability >= 11 && Progress >= 9475 && IsPliant == True)
+=> S5E (Quality > 27844 && Cp >= 171 && EffectiveDurabilityRemaining > 35 && Durability >= 11 && WasteNotAura <= 3 && WasteNot2Aura < 1 && Progress >= 9475 && GreatStridesAura < 2)
+=> S5E (Quality > 27844 && Cp >= 155 && EffectiveDurabilityRemaining > 35 && Durability >= 11 && WasteNotAura <= 3 && WasteNot2Aura < 1 && Progress >= 9475 && IsPliant == True && Progress >= 9475 && GreatStridesAura < 2)
+=> S5F (Quality > 23863 && Cp >= 186 && EffectiveDurabilityRemaining > 50 && Durability >= 26 && Progress >= 9475)
+=> S5F (Quality > 23863 && Cp >= 170 && EffectiveDurabilityRemaining > 50 && Durability >= 26 && Progress >= 9475 && IsPliant == True)
+=> S4Sturdy (EffectiveDurabilityRemaining > 25 && IsSturdy == True)
+=> S5 (Cp >= 99 && Cp < 106 && Durability <= 10)
+=> S5 (Cp >= 99 && Cp < 106 && EffectiveDurabilityRemaining <= 30)
+=> S5 (Cp >= 115 && Cp < 131 && EffectiveDurabilityRemaining < 40 && Progress >= 9475 && IsPliant == True)
+=> S5 (EffectiveDurabilityRemaining <= 30 && Cp < 153 && IsPliant == False && IsGood == False)
+=> S4Good (IsGood == True)
+=> S4Pliant (IsPliant == True)
+=> S4Sturdy (IsSturdy == True)
+=> S4
+
+S4Good:
+- (GreatStridesAura == 0 && InnovationAura == 0 && WasteNotAura == 0 && WasteNot2Aura == 0 && ManipulationAura > 1 && Durability <= 55) Tricks of the Trade | (GreatStridesAura == 0 && InnovationAura == 0 && WasteNotAura == 0 && WasteNot2Aura == 0 && ManipulationAura == 0 && Durability <= 60) Tricks of the Trade | (Durability > 10 && EffectiveDurabilityRemaining > 30 && Cp >= 117) Precise Touch | (Durability > 10 && Cp >= 205) Precise Touch | Tricks of the Trade
+=> S5 (Quality >= 39124 && EffectiveDurabilityRemaining > 20 && Progress >= 9475)
+=> S5A (Quality > 35143 && Cp >= 131 && EffectiveDurabilityRemaining > 20 && Progress >= 9475)
+=> S5A (Quality > 35143 && Cp >= 115 && EffectiveDurabilityRemaining > 20 && Progress >= 9475 && IsPliant == True)
+=> S5 (Quality >= 39124 && Cp >= 99 && EffectiveDurabilityRemaining > 20 && Progress >= 9475)
+=> S5B (Quality > 32489 && Cp >= 156 && EffectiveDurabilityRemaining > 25 && EffectiveDurabilityRemaining <= 30 && WasteNotAura < 1 && WasteNot2Aura < 1 && Progress >= 9475)
+=> S5B (Quality > 32489 && Cp >= 144 && EffectiveDurabilityRemaining > 25 && EffectiveDurabilityRemaining <= 30 && WasteNotAura < 1 && WasteNot2Aura < 1 && Progress >= 9475 && IsPliant == True)
+=> S5C (Quality > 31825 && Cp >= 202 && EffectiveDurabilityRemaining > 15 && Durability >= 1 && Progress >= 9475)
+=> S5C (Quality > 31825 && Cp >= 186 && EffectiveDurabilityRemaining > 15 && Durability >= 1 && Progress >= 9475 && IsPliant == True)
+=> S5D (Quality > 31825 && Cp >= 146 && EffectiveDurabilityRemaining > 30 && Durability >= 11 && Progress >= 9475)
+=> S5D (Quality > 31825 && Cp >= 130 && EffectiveDurabilityRemaining > 30 && Durability >= 11 && Progress >= 9475 && IsPliant == True)
+=> S5E (Quality > 27844 && Cp >= 171 && EffectiveDurabilityRemaining > 35 && Durability >= 11 && WasteNotAura <= 3 && WasteNot2Aura < 1 && Progress >= 9475 && GreatStridesAura < 2)
+=> S5E (Quality > 27844 && Cp >= 155 && EffectiveDurabilityRemaining > 35 && Durability >= 11 && WasteNotAura <= 3 && WasteNot2Aura < 1 && Progress >= 9475 && IsPliant == True && Progress >= 9475 && GreatStridesAura < 2)
+=> S5F (Quality > 23863 && Cp >= 186 && EffectiveDurabilityRemaining > 50 && Durability >= 26 && Progress >= 9475)
+=> S5F (Quality > 23863 && Cp >= 170 && EffectiveDurabilityRemaining > 50 && Durability >= 26 && Progress >= 9475 && IsPliant == True)
+=> S4C (EffectiveDurabilityRemaining <= 30 && Cp >= 143 && IsPliant == True)
+=> S4C (EffectiveDurabilityRemaining <= 30 && Cp >= 153)
+=> S4C (EffectiveDurabilityRemaining > 30)
+=> S4C (EffectiveDurabilityRemaining > 25 && WasteNot2Aura > 0)
+=> S4C (EffectiveDurabilityRemaining > 25 && WasteNotAura > 0)
+=> S4C (EffectiveDurabilityRemaining > 25 && IsSturdy == True)
+=> S4C (EffectiveDurabilityRemaining <= 30 && IsGood == True)
+=> S5 (Cp >= 99 && Cp < 106 && Durability <= 10)
+=> S5 (Cp >= 99 && Cp < 106 && EffectiveDurabilityRemaining <= 30)
+=> S5 (Cp >= 115 && Cp < 131 && EffectiveDurabilityRemaining < 40 && Progress >= 9475 && IsPliant == True)
+=> S5 (EffectiveDurabilityRemaining <= 30 && Cp < 153 && IsPliant == False && IsGood == False)
+
+S4Pliant:
+- (IsLastSkillObserve == False && GreatStridesAura == 1 && InnovationAura > 0 && Durability > 20 && EffectiveDurabilityRemaining > 40 && Cp >= 119) Preparatory Touch | (IsLastSkillObserve == False && GreatStridesAura == 1 && InnovationAura > 0 && Durability > 20 && Cp >= 207) Preparatory Touch | (IsLastSkillObserve == False && GreatStridesAura == 2 && InnovationAura == 1 && Durability > 20 && EffectiveDurabilityRemaining > 40 && Cp >= 119) Preparatory Touch | (IsLastSkillObserve == False && GreatStridesAura == 2 && InnovationAura == 1 && Durability > 20 && Cp >= 207) Preparatory Touch | (GreatStridesAura == 0 && Durability <= 10 && Cp >= 143) Master's Mend | (GreatStridesAura == 3 && Durability <= 15 && Cp >= 143) Master's Mend | (GreatStridesAura == 0 && ManipulationAura == 0 && Durability <= 10 && Cp >= 143) Master's Mend | (GreatStridesAura == 0 && ManipulationAura <= 2 && Cp >= 161 && EffectiveDurabilityRemaining < 55) Manipulation | (GreatStridesAura == 3 && ManipulationAura <= 2 && Cp >= 161 && EffectiveDurabilityRemaining < 55) Manipulation | (GreatStridesAura == 0 && Durability <= 25 && ManipulationAura == 0 && Cp >= 143) Master's Mend | (IsLastSkillObserve == False && GreatStridesAura > 0 && InnovationAura > 0 && Durability > 20 && EffectiveDurabilityRemaining > 40 && Cp >= 119) Preparatory Touch | (IsLastSkillObserve == False && GreatStridesAura > 0 && InnovationAura > 0 && Durability > 20 && Cp >= 207) Preparatory Touch | (GreatStridesAura == 0 && InnovationAura >= 3 && WasteNotAura == 0 && Cp >= 159 && EffectiveDurabilityRemaining > 40) Waste Not | (GreatStridesAura == 0 && InnovationAura >= 3 && WasteNot2Aura == 0 && Cp >= 159 && EffectiveDurabilityRemaining > 40) Waste Not | (InnovationAura > 0 && WasteNotAura > 0 && Durability > 10 && EffectiveDurabilityRemaining > 30 && Cp >= 119) Preparatory Touch | (InnovationAura > 0 && WasteNotAura > 0 && Durability > 10 && Cp >= 207) Preparatory Touch | (InnovationAura > 0 && WasteNot2Aura > 0 && Durability > 10 && EffectiveDurabilityRemaining > 30 && Cp >= 119) Preparatory Touch | (InnovationAura > 0 && WasteNot2Aura > 0 && Durability > 10 && Cp >= 207) Preparatory Touch | (InnovationAura > 0 && Durability > 20 && EffectiveDurabilityRemaining > 40 && Cp >= 119) Preparatory Touch | (InnovationAura > 0 && Durability > 20 && Cp >= 207) Preparatory Touch | (IsLastSkillObserve == True && Durability > 10 && EffectiveDurabilityRemaining > 30 && Cp >= 108) Focused Touch | (IsLastSkillObserve == True && InnovationAura > 0 && Durability > 10 && Cp >= 196) Focused Touch | (GreatStridesAura == 0 && InnovationAura == 0 && Cp >= 246) Great Strides | (GreatStridesAura == 0 && InnovationAura == 0 && Cp >= 158 && EffectiveDurabilityRemaining > 30) Great Strides | (GreatStridesAura == 0 && InnovationAura >= 3 && Cp >= 228) Great Strides | (GreatStridesAura == 0 && InnovationAura >= 3 && Cp >= 140 && EffectiveDurabilityRemaining > 30) Great Strides | (GreatStridesAura >= 2 && InnovationAura == 0 && Cp >= 133 && EffectiveDurabilityRemaining > 30) Innovation | (GreatStridesAura >= 2 && InnovationAura == 0 && Cp >= 221) Innovation | (GreatStridesAura == 0 && InnovationAura == 0 && Cp >= 133 && EffectiveDurabilityRemaining > 30) Innovation | (GreatStridesAura == 0 && InnovationAura == 0 && Durability > 5 && Cp >= 221 && EffectiveDurabilityRemaining > 10) Innovation | (IsLastSkillObserve == False && InnovationAura >= 2 && Cp >= 121 && EffectiveDurabilityRemaining > 30) Observe | (IsLastSkillObserve == False && InnovationAura >= 2 && Cp >= 209) Observe | (IsLastSkillObserve == False && GreatStridesAura == 0 && InnovationAura > 0 && WasteNotAura > 0 && Durability > 5 && Cp >= 108 && EffectiveDurabilityRemaining > 30) Basic Touch | (IsLastSkillObserve == False && GreatStridesAura == 0 && InnovationAura > 0 && WasteNotAura > 0 && Durability > 5 && Cp >= 196) Basic Touch | (IsLastSkillObserve == False && GreatStridesAura == 0 && InnovationAura > 0 && WasteNot2Aura > 0 && Durability > 5 && Cp >= 108 && EffectiveDurabilityRemaining > 30) Basic Touch | (IsLastSkillObserve == False && GreatStridesAura == 0 && InnovationAura > 0 && WasteNot2Aura > 0 && Durability > 5 && Cp >= 196) Basic Touch | (IsLastSkillObserve == False && WasteNot2Aura == 0 && WasteNotAura == 0 && InnovationAura > 0 && WasteNot2Aura == 0 && WasteNotAura == 0 && Durability > 5 && Cp >= 200) Prudent Touch | (IsLastSkillObserve == False && WasteNot2Aura == 0 && WasteNotAura == 0 && InnovationAura > 0 && WasteNot2Aura == 0 && WasteNotAura == 0 && Durability > 5 && EffectiveDurabilityRemaining > 25 && Cp >= 112) Prudent Touch | (GreatStridesAura == 0 && InnovationAura == 0 && Durability >= 15 && EffectiveDurabilityRemaining > 40 && Cp >= 108) Innovation | (EffectiveDurabilityRemaining > 25 && Durability > 5 && WasteNotAura > 0) Hasty Touch | (EffectiveDurabilityRemaining > 25 && Durability > 5 && WasteNot2Aura > 0) Hasty Touch | (EffectiveDurabilityRemaining > 30 && Durability > 10) Hasty Touch | (Durability > 10 && Cp > 187) Hasty Touch | (Cp >= 103) Observe
+=> S5 (Quality >= 39124 && EffectiveDurabilityRemaining > 20 && Progress >= 9475)
+=> S5A (Quality > 35143 && Cp >= 131 && EffectiveDurabilityRemaining > 20 && Progress >= 9475)
+=> S5A (Quality > 35143 && Cp >= 115 && EffectiveDurabilityRemaining > 20 && Progress >= 9475 && IsPliant == True)
+=> S5 (Quality >= 39124 && Cp >= 99 && EffectiveDurabilityRemaining > 20 && Progress >= 9475)
+=> S5B (Quality > 32489 && Cp >= 156 && EffectiveDurabilityRemaining > 25 && EffectiveDurabilityRemaining <= 30 && WasteNotAura < 1 && WasteNot2Aura < 1 && Progress >= 9475)
+=> S5B (Quality > 32489 && Cp >= 144 && EffectiveDurabilityRemaining > 25 && EffectiveDurabilityRemaining <= 30 && WasteNotAura < 1 && WasteNot2Aura < 1 && Progress >= 9475 && IsPliant == True)
+=> S5C (Quality > 31825 && Cp >= 202 && EffectiveDurabilityRemaining > 15 && Durability >= 1 && Progress >= 9475)
+=> S5C (Quality > 31825 && Cp >= 186 && EffectiveDurabilityRemaining > 15 && Durability >= 1 && Progress >= 9475 && IsPliant == True)
+=> S5D (Quality > 31825 && Cp >= 146 && EffectiveDurabilityRemaining > 30 && Durability >= 11 && Progress >= 9475)
+=> S5D (Quality > 31825 && Cp >= 130 && EffectiveDurabilityRemaining > 30 && Durability >= 11 && Progress >= 9475 && IsPliant == True)
+=> S5E (Quality > 27844 && Cp >= 171 && EffectiveDurabilityRemaining > 35 && Durability >= 11 && WasteNotAura <= 3 && WasteNot2Aura < 1 && Progress >= 9475 && GreatStridesAura < 2)
+=> S5E (Quality > 27844 && Cp >= 155 && EffectiveDurabilityRemaining > 35 && Durability >= 11 && WasteNotAura <= 3 && WasteNot2Aura < 1 && Progress >= 9475 && IsPliant == True && Progress >= 9475 && GreatStridesAura < 2)
+=> S5F (Quality > 23863 && Cp >= 186 && EffectiveDurabilityRemaining > 50 && Durability >= 26 && Progress >= 9475)
+=> S5F (Quality > 23863 && Cp >= 170 && EffectiveDurabilityRemaining > 50 && Durability >= 26 && Progress >= 9475 && IsPliant == True)
+=> S4C (EffectiveDurabilityRemaining <= 30 && Cp >= 143 && IsPliant == True)
+=> S4C (EffectiveDurabilityRemaining <= 30 && Cp >= 153)
+=> S4C (EffectiveDurabilityRemaining > 30)
+=> S4C (EffectiveDurabilityRemaining > 25 && WasteNot2Aura > 0)
+=> S4C (EffectiveDurabilityRemaining > 25 && WasteNotAura > 0)
+=> S4C (EffectiveDurabilityRemaining > 25 && IsSturdy == True)
+=> S4C (EffectiveDurabilityRemaining <= 30 && IsGood == True)
+=> S5 (Cp >= 99 && Cp < 106 && Durability <= 10)
+=> S5 (Cp >= 99 && Cp < 106 && EffectiveDurabilityRemaining <= 30)
+=> S5 (Cp >= 115 && Cp < 131 && EffectiveDurabilityRemaining < 40 && Progress >= 9475 && IsPliant == True)
+=> S5 (EffectiveDurabilityRemaining <= 30 && Cp < 153 && IsPliant == False && IsGood == False)
+
+S4Sturdy:
+- (IsLastSkillObserve == False && InnovationAura > 0 && WasteNotAura > 0 && Durability > 5 && EffectiveDurabilityRemaining > 25 && Cp >= 139) Preparatory Touch | (IsLastSkillObserve == False && InnovationAura > 0 && WasteNotAura > 0 && Durability > 5 && Cp >= 227) Preparatory Touch | (IsLastSkillObserve == False && InnovationAura > 0 && WasteNot2Aura > 0 && Durability > 5 && EffectiveDurabilityRemaining > 25 && Cp >= 139) Preparatory Touch | (IsLastSkillObserve == False && InnovationAura > 0 && WasteNot2Aura > 0 && Durability > 5 && Cp >= 227) Preparatory Touch | (IsLastSkillObserve == False && GreatStridesAura > 0 && InnovationAura > 0 && Durability > 10 && EffectiveDurabilityRemaining > 30 && Cp >= 227) Preparatory Touch | (IsLastSkillObserve == False && GreatStridesAura > 0 && InnovationAura > 0 && Durability > 10 && Cp >= 139) Preparatory Touch | (IsLastSkillObserve == False && GreatStridesAura > 0 && InnovationAura > 0 && Durability > 10 && Cp >= 227) Preparatory Touch | (IsLastSkillObserve == True && Durability > 5 && EffectiveDurabilityRemaining > 25 && Cp >= 117) Focused Touch | (IsLastSkillObserve == True && Durability > 5 && Cp >= 205) Focused Touch | (IsLastSkillObserve == False && InnovationAura > 0 && Durability > 10 && EffectiveDurabilityRemaining > 30 && Cp >= 139) Preparatory Touch | (IsLastSkillObserve == False && InnovationAura > 0 && Durability > 10 && Cp >= 227) Preparatory Touch | (GreatStridesAura == 0 && Durability > 55 && ManipulationAura > 0) Hasty Touch | (GreatStridesAura == 0 && Durability < 30 && ManipulationAura == 0 && WasteNotAura == 0 && WasteNot2Aura == 0 && Cp >= 209) Manipulation | (GreatStridesAura == 0 && InnovationAura == 0 && Cp >= 262) Great Strides | (GreatStridesAura == 0 && InnovationAura == 0 && Cp >= 174 && EffectiveDurabilityRemaining > 30) Great Strides | (GreatStridesAura == 0 && InnovationAura >= 3 && Cp >= 244) Great Strides | (GreatStridesAura == 0 && InnovationAura >= 3 && Cp >= 156 && EffectiveDurabilityRemaining > 30) Great Strides | (GreatStridesAura >= 2 && InnovationAura == 0 && Cp >= 142 && EffectiveDurabilityRemaining > 30) Innovation | (GreatStridesAura >= 2 && InnovationAura == 0 && Cp >= 230) Innovation | (GreatStridesAura == 0 && InnovationAura == 0 && Cp >= 142 && EffectiveDurabilityRemaining > 40) Innovation | (GreatStridesAura == 0 && InnovationAura == 0 && Durability > 5 && Cp >= 230 && EffectiveDurabilityRemaining > 10) Innovation | (IsLastSkillObserve == False && InnovationAura >= 2 && Cp >= 124 && EffectiveDurabilityRemaining > 30) Observe | (IsLastSkillObserve == False && InnovationAura >= 2 && Cp >= 212) Observe | (IsLastSkillObserve == False && GreatStridesAura == 0 && InnovationAura > 0 && WasteNotAura > 0 && Durability > 3 && Cp >= 117 && EffectiveDurabilityRemaining > 23) Basic Touch | (IsLastSkillObserve == False && GreatStridesAura == 0 && InnovationAura > 0 && WasteNotAura > 0 && Durability > 3 && Cp >= 205) Basic Touch | (IsLastSkillObserve == False && GreatStridesAura == 0 && InnovationAura > 0 && WasteNot2Aura > 0 && Durability > 3 && Cp >= 117 && EffectiveDurabilityRemaining > 23) Basic Touch | (IsLastSkillObserve == False && GreatStridesAura == 0 && InnovationAura > 0 && WasteNot2Aura > 0 && Durability > 3 && Cp >= 205) Basic Touch | (IsLastSkillObserve == False && InnovationAura > 0 && WasteNot2Aura == 0 && WasteNotAura == 0 && Durability > 3 && Cp >= 212) Prudent Touch | (IsLastSkillObserve == False && InnovationAura > 0 && WasteNot2Aura == 0 && WasteNotAura == 0 && Durability > 3 && EffectiveDurabilityRemaining > 23 && Cp >= 124) Prudent Touch | (GreatStridesAura == 0 && Durability < 10 && Cp >= 187 && EffectiveDurabilityRemaining <= 10) Master's Mend | (GreatStridesAura == 0 && Durability < 15 && ManipulationAura == 0 && Cp >= 209) Manipulation | (WasteNotAura > 0 && EffectiveDurabilityRemaining > 23 && Durability > 3) Hasty Touch | (WasteNot2Aura > 0 && EffectiveDurabilityRemaining > 23 && Durability > 3) Hasty Touch | (EffectiveDurabilityRemaining > 25 && Durability > 5) Hasty Touch | (Durability > 5 && Cp > 187) Hasty Touch | (Cp >= 106) Observe
+=> S5 (Quality >= 39124 && EffectiveDurabilityRemaining > 20 && Progress >= 9475)
+=> S5A (Quality > 35143 && Cp >= 131 && EffectiveDurabilityRemaining > 20 && Progress >= 9475)
+=> S5A (Quality > 35143 && Cp >= 115 && EffectiveDurabilityRemaining > 20 && Progress >= 9475 && IsPliant == True)
+=> S5 (Quality >= 39124 && Cp >= 99 && EffectiveDurabilityRemaining > 20 && Progress >= 9475)
+=> S5B (Quality > 32489 && Cp >= 156 && EffectiveDurabilityRemaining > 25 && EffectiveDurabilityRemaining <= 30 && WasteNotAura < 1 && WasteNot2Aura < 1 && Progress >= 9475)
+=> S5B (Quality > 32489 && Cp >= 144 && EffectiveDurabilityRemaining > 25 && EffectiveDurabilityRemaining <= 30 && WasteNotAura < 1 && WasteNot2Aura < 1 && Progress >= 9475 && IsPliant == True)
+=> S5C (Quality > 31825 && Cp >= 202 && EffectiveDurabilityRemaining > 15 && Durability >= 1 && Progress >= 9475)
+=> S5C (Quality > 31825 && Cp >= 186 && EffectiveDurabilityRemaining > 15 && Durability >= 1 && Progress >= 9475 && IsPliant == True)
+=> S5D (Quality > 31825 && Cp >= 146 && EffectiveDurabilityRemaining > 30 && Durability >= 11 && Progress >= 9475)
+=> S5D (Quality > 31825 && Cp >= 130 && EffectiveDurabilityRemaining > 30 && Durability >= 11 && Progress >= 9475 && IsPliant == True)
+=> S5E (Quality > 27844 && Cp >= 171 && EffectiveDurabilityRemaining > 35 && Durability >= 11 && WasteNotAura <= 3 && WasteNot2Aura < 1 && Progress >= 9475 && GreatStridesAura < 2)
+=> S5E (Quality > 27844 && Cp >= 155 && EffectiveDurabilityRemaining > 35 && Durability >= 11 && WasteNotAura <= 3 && WasteNot2Aura < 1 && Progress >= 9475 && IsPliant == True && Progress >= 9475 && GreatStridesAura < 2)
+=> S5F (Quality > 23863 && Cp >= 186 && EffectiveDurabilityRemaining > 50 && Durability >= 26 && Progress >= 9475)
+=> S5F (Quality > 23863 && Cp >= 170 && EffectiveDurabilityRemaining > 50 && Durability >= 26 && Progress >= 9475 && IsPliant == True)
+=> S4C (EffectiveDurabilityRemaining <= 30 && Cp >= 143 && IsPliant == True)
+=> S4C (EffectiveDurabilityRemaining <= 30 && Cp >= 153)
+=> S4C (EffectiveDurabilityRemaining > 30)
+=> S4C (EffectiveDurabilityRemaining > 25 && WasteNot2Aura > 0)
+=> S4C (EffectiveDurabilityRemaining > 25 && WasteNotAura > 0)
+=> S4C (EffectiveDurabilityRemaining > 25 && IsSturdy == True)
+=> S4C (EffectiveDurabilityRemaining <= 30 && IsGood == True)
+=> S5 (Cp >= 99 && Cp < 106 && Durability <= 10)
+=> S5 (Cp >= 99 && Cp < 106 && EffectiveDurabilityRemaining <= 30)
+=> S5 (Cp >= 115 && Cp < 131 && EffectiveDurabilityRemaining < 40 && Progress >= 9475 && IsPliant == True)
+=> S5 (EffectiveDurabilityRemaining <= 30 && Cp < 153 && IsPliant == False && IsGood == False)
+
+S4:
+- (IsLastSkillObserve == False && GreatStridesAura == 1 && InnovationAura > 0 && Durability > 20 && EffectiveDurabilityRemaining > 40 && Cp >= 139) Preparatory Touch | (IsLastSkillObserve == False && GreatStridesAura == 1 && InnovationAura > 0 && Durability > 20 && Cp >= 227) Preparatory Touch | (IsLastSkillObserve == False && GreatStridesAura == 2 && InnovationAura == 1 && Durability > 20 && EffectiveDurabilityRemaining > 40 && Cp >= 139) Preparatory Touch | (IsLastSkillObserve == False && GreatStridesAura == 2 && InnovationAura == 1 && Durability > 20 && Cp >= 227) Preparatory Touch | (GreatStridesAura == 0 && Durability < 15 && ManipulationAura == 0 && WasteNotAura == 0 && WasteNot2Aura == 0 && Cp >= 209) Manipulation | (GreatStridesAura == 0 && Durability <= 10 && Cp >= 187 && EffectiveDurabilityRemaining <= 10) Master's Mend | (InnovationAura > 0 && WasteNotAura > 0 && Durability > 10 && EffectiveDurabilityRemaining > 30 && Cp >= 139) Preparatory Touch | (InnovationAura > 0 && WasteNotAura > 0 && Durability > 10 && Cp >= 227) Preparatory Touch | (InnovationAura > 0 && WasteNot2Aura > 0 && Durability > 10 && EffectiveDurabilityRemaining > 30 && Cp >= 139) Preparatory Touch | (InnovationAura > 0 && WasteNot2Aura > 0 && Durability > 10 && Cp >= 227) Preparatory Touch | (IsLastSkillObserve == True && Durability > 10 && EffectiveDurabilityRemaining > 30 && Cp >= 117) Focused Touch | (IsLastSkillObserve == True && Durability > 10 && Cp >= 205) Focused Touch | (GreatStridesAura == 0 && Durability > 55 && ManipulationAura > 0) Hasty Touch | (GreatStridesAura == 0 && Durability < 30 && ManipulationAura == 0 && WasteNotAura == 0 && WasteNot2Aura == 0 && Cp >= 209) Manipulation | (GreatStridesAura == 0 && InnovationAura == 0 && Cp >= 262) Great Strides | (GreatStridesAura == 0 && InnovationAura == 0 && Cp >= 174 && EffectiveDurabilityRemaining > 30) Great Strides | (GreatStridesAura == 0 && InnovationAura >= 3 && Cp >= 244) Great Strides | (GreatStridesAura == 0 && InnovationAura >= 3 && Cp >= 156 && EffectiveDurabilityRemaining > 30) Great Strides | (GreatStridesAura >= 2 && InnovationAura == 0 && Cp >= 142 && EffectiveDurabilityRemaining > 30) Innovation | (GreatStridesAura >= 2 && InnovationAura == 0 && Durability > 5 && Cp >= 230 && EffectiveDurabilityRemaining > 10) Innovation | (GreatStridesAura == 0 && InnovationAura == 0 && Cp >= 142 && EffectiveDurabilityRemaining > 40) Innovation | (GreatStridesAura == 0 && InnovationAura == 0 && Durability > 5 && Cp >= 230 && EffectiveDurabilityRemaining > 10) Innovation | (IsLastSkillObserve == False && InnovationAura >= 2 && Cp >= 124 && EffectiveDurabilityRemaining > 30) Observe | (IsLastSkillObserve == False && InnovationAura >= 2 && Cp >= 212) Observe | (IsLastSkillObserve == False && GreatStridesAura == 0 && InnovationAura > 0 && WasteNotAura > 0 && Durability > 5 && Cp >= 117 && EffectiveDurabilityRemaining > 30) Basic Touch | (IsLastSkillObserve == False && GreatStridesAura == 0 && InnovationAura > 0 && WasteNotAura > 0 && Durability > 5 && Cp >= 205) Basic Touch | (IsLastSkillObserve == False && GreatStridesAura == 0 && InnovationAura > 0 && WasteNot2Aura > 0 && Durability > 5 && Cp >= 117 && EffectiveDurabilityRemaining > 30) Basic Touch | (IsLastSkillObserve == False && GreatStridesAura == 0 && InnovationAura > 0 && WasteNot2Aura > 0 && Durability > 5 && Cp >= 205) Basic Touch | (IsLastSkillObserve == False && InnovationAura > 0 && WasteNot2Aura == 0 && WasteNotAura == 0 && Durability > 5 && Cp >= 212) Prudent Touch | (IsLastSkillObserve == False && WasteNot2Aura == 0 && WasteNotAura == 0 && InnovationAura > 0 && Durability > 5 && EffectiveDurabilityRemaining > 25 && Cp >= 124) Prudent Touch | (GreatStridesAura == 0 && InnovationAura == 0 && Durability >= 15 && EffectiveDurabilityRemaining > 40 && Cp >= 117) Innovation | (WasteNotAura > 0 && EffectiveDurabilityRemaining > 25 && Durability > 5) Hasty Touch | (WasteNot2Aura > 0 && EffectiveDurabilityRemaining > 25 && Durability > 5) Hasty Touch | (EffectiveDurabilityRemaining > 30 && Durability > 10) Hasty Touch | (Durability > 10 && Cp > 187) Hasty Touch | (Cp >= 106) Observe
+=> S5 (Quality >= 39124 && EffectiveDurabilityRemaining > 20 && Progress >= 9475)
+=> S5A (Quality > 35143 && Cp >= 131 && EffectiveDurabilityRemaining > 20 && Progress >= 9475)
+=> S5A (Quality > 35143 && Cp >= 115 && EffectiveDurabilityRemaining > 20 && Progress >= 9475 && IsPliant == True)
+=> S5 (Quality >= 39124 && Cp >= 99 && EffectiveDurabilityRemaining > 20 && Progress >= 9475)
+=> S5B (Quality > 32489 && Cp >= 156 && EffectiveDurabilityRemaining > 25 && EffectiveDurabilityRemaining <= 30 && WasteNotAura < 1 && WasteNot2Aura < 1 && Progress >= 9475)
+=> S5B (Quality > 32489 && Cp >= 144 && EffectiveDurabilityRemaining > 25 && EffectiveDurabilityRemaining <= 30 && WasteNotAura < 1 && WasteNot2Aura < 1 && Progress >= 9475 && IsPliant == True)
+=> S5C (Quality > 31825 && Cp >= 202 && EffectiveDurabilityRemaining > 15 && Durability >= 1 && Progress >= 9475)
+=> S5C (Quality > 31825 && Cp >= 186 && EffectiveDurabilityRemaining > 15 && Durability >= 1 && Progress >= 9475 && IsPliant == True)
+=> S5D (Quality > 31825 && Cp >= 146 && EffectiveDurabilityRemaining > 30 && Durability >= 11 && Progress >= 9475)
+=> S5D (Quality > 31825 && Cp >= 130 && EffectiveDurabilityRemaining > 30 && Durability >= 11 && Progress >= 9475 && IsPliant == True)
+=> S5E (Quality > 27844 && Cp >= 171 && EffectiveDurabilityRemaining > 35 && Durability >= 11 && WasteNotAura <= 3 && WasteNot2Aura < 1 && Progress >= 9475 && GreatStridesAura < 2)
+=> S5E (Quality > 27844 && Cp >= 155 && EffectiveDurabilityRemaining > 35 && Durability >= 11 && WasteNotAura <= 3 && WasteNot2Aura < 1 && Progress >= 9475 && IsPliant == True && Progress >= 9475 && GreatStridesAura < 2)
+=> S5F (Quality > 23863 && Cp >= 186 && EffectiveDurabilityRemaining > 50 && Durability >= 26 && Progress >= 9475)
+=> S5F (Quality > 23863 && Cp >= 170 && EffectiveDurabilityRemaining > 50 && Durability >= 26 && Progress >= 9475 && IsPliant == True)
+=> S4C (EffectiveDurabilityRemaining <= 30 && Cp >= 143 && IsPliant == True)
+=> S4C (EffectiveDurabilityRemaining <= 30 && Cp >= 153)
+=> S4C (EffectiveDurabilityRemaining > 30)
+=> S4C (EffectiveDurabilityRemaining > 25 && WasteNot2Aura > 0)
+=> S4C (EffectiveDurabilityRemaining > 25 && WasteNotAura > 0)
+=> S4C (EffectiveDurabilityRemaining > 25 && IsSturdy == True)
+=> S4C (EffectiveDurabilityRemaining <= 30 && IsGood == True)
+=> S5 (Cp >= 99 && Cp < 106 && Durability <= 10)
+=> S5 (Cp >= 99 && Cp < 106 && EffectiveDurabilityRemaining <= 30)
+=> S5 (Cp >= 115 && Cp < 131 && EffectiveDurabilityRemaining < 40 && Progress >= 9475 && IsPliant == True)
+=> S5 (EffectiveDurabilityRemaining <= 30 && Cp < 153 && IsPliant == False && IsGood == False)
+
+S5:
+- (IsPliant == True && WasteNot2Aura == 0 && WasteNotAura == 0 && Cp >= 144 && Durability > 5 && EffectiveDurabilityRemaining > 25) Prudent Touch | (IsPliant == True && WasteNot2Aura == 0 && WasteNotAura == 0 && InnovationAura > 0 && Cp >= 112 && Durability > 5 && EffectiveDurabilityRemaining > 25) Prudent Touch | (IsPliant == False && WasteNot2Aura == 0 && WasteNotAura == 0 && Cp >= 156 && Durability > 5 && EffectiveDurabilityRemaining > 25) Prudent Touch | (IsPliant == True && WasteNot2Aura == 0 && WasteNotAura == 0 && Cp >= 112 && Cp < 115 && Durability > 5 && EffectiveDurabilityRemaining > 25) Prudent Touch | (IsPliant == False && WasteNot2Aura == 0 && WasteNotAura == 0 && Cp >= 124 && Cp < 131 && Durability > 5 && EffectiveDurabilityRemaining > 25) Prudent Touch
+- (IsPliant == True && Cp >= 115 && GreatStridesAura < 3) Great Strides | (Cp >= 131 && GreatStridesAura < 3) Great Strides
+- (IsGood == True && EffectiveDurabilityRemaining > 20 && Cp >= 99 && Durability > 10) Precise Touch | (InnovationAura < 4) Innovation
+- (InnerQuietAura > 0 && InnovationAura > 0 && GreatStridesAura > 0 && Quality >= 45095) Byregot's Blessing | (IsGood == True && EffectiveDurabilityRemaining > 20 && Cp >= 81 && Durability > 10) Precise Touch | (InnovationAura > 0 && IsSturdy == True && Cp >= 96 && Durability > 15 && EffectiveDurabilityRemaining > 20) Preparatory Touch | (IsSturdy == True && Cp >= 103 && Durability > 10 && Durability < 16 && EffectiveDurabilityRemaining > 20) Preparatory Touch | (InnovationAura < 4) Innovation | (EffectiveDurabilityRemaining > 20 && Durability > 5) Observe
+- (InnerQuietAura == 0) Basic Synthesis | (InnovationAura < 2 && Cp >= 74) Innovation | (InnovationAura > 0 && IsSturdy == True && Cp >= 96 && Durability > 15 && EffectiveDurabilityRemaining > 20) Preparatory Touch | (InnovationAura > 0 && Durability > 5 && Cp >= 56 && Durability <= 10 && EffectiveDurabilityRemaining > 10 && EffectiveDurabilityRemaining <= 20) Great Strides | (InnovationAura > 0 && Durability < 6 && Cp >= 63 && EffectiveDurabilityRemaining > 10 && EffectiveDurabilityRemaining <= 20) Observe | (IsGood == True && EffectiveDurabilityRemaining > 20 && Cp >= 74 && Durability > 10) Precise Touch | (IsLastSkillObserve == True && EffectiveDurabilityRemaining > 20 && Durability > 10) Focused Touch | (Cp >= 56) Great Strides
+- (InnovationAura == 4 && GreatStridesAura == 0) Great Strides | (IsLastSkillObserve == True && Cp >= 56 && Durability > 5 && EffectiveDurabilityRemaining > 10) Great Strides | (IsGood == True && GreatStridesAura > 0 && Durability > 10) Byregot's Blessing | (GreatStridesAura >= 2 && Cp >= 31 && InnovationAura >= 2 && Quality < 45095) Observe | (GreatStridesAura >= 1 && CarefulObservationsRemaining > 0 && Cp >= 24 && InnovationAura >= 1 && Quality < 45095) Careful Observation | (GreatStridesAura == 0) Great Strides | Byregot's Blessing
+- (IsGood == True && GreatStridesAura > 0 && Durability > 10) Byregot's Blessing | (GreatStridesAura >= 2 && Cp >= 31 && InnovationAura >= 2 && Quality < 45095) Observe | (GreatStridesAura >= 1 && CarefulObservationsRemaining > 0 && Cp >= 24 && InnovationAura >= 1 && Quality < 45095) Careful Observation | (InnerQuietAura > 0) Byregot's Blessing | Basic Synthesis
+- (IsGood == True && GreatStridesAura > 0 && Durability > 10) Byregot's Blessing | (GreatStridesAura >= 2 && Cp >= 31 && InnovationAura >= 2 && Quality < 45095) Observe | (GreatStridesAura >= 1 && CarefulObservationsRemaining > 0 && Cp >= 24 && InnovationAura >= 1 && Quality < 45095) Careful Observation | (InnerQuietAura > 0) Byregot's Blessing | Basic Synthesis
+- (IsGood == True && GreatStridesAura > 0 && Durability > 10) Byregot's Blessing | (GreatStridesAura >= 2 && Cp >= 31 && InnovationAura >= 2 && Quality < 45095) Observe | (GreatStridesAura >= 1 && CarefulObservationsRemaining > 0 && Cp >= 24 && InnovationAura >= 1 && Quality < 45095) Careful Observation | (InnerQuietAura > 0) Byregot's Blessing | Basic Synthesis
+- (IsGood == True && GreatStridesAura > 0 && Durability > 10) Byregot's Blessing | (GreatStridesAura >= 2 && Cp >= 31 && InnovationAura >= 2 && Quality < 45095) Observe | (GreatStridesAura >= 1 && CarefulObservationsRemaining > 0 && Cp >= 24 && InnovationAura >= 1 && Quality < 45095) Careful Observation | (InnerQuietAura > 0) Byregot's Blessing | Basic Synthesis
+- (IsGood == True && GreatStridesAura > 0 && Durability > 10) Byregot's Blessing | (GreatStridesAura >= 2 && Cp >= 31 && InnovationAura >= 2 && Quality < 45095) Observe | (GreatStridesAura >= 1 && CarefulObservationsRemaining > 0 && Cp >= 24 && InnovationAura >= 1 && Quality < 45095) Careful Observation | (InnerQuietAura > 0) Byregot's Blessing | Basic Synthesis
+- (IsGood == True && GreatStridesAura > 0 && Durability > 10) Byregot's Blessing | (GreatStridesAura >= 2 && Cp >= 31 && InnovationAura >= 2 && Quality < 45095) Observe | (GreatStridesAura >= 1 && CarefulObservationsRemaining > 0 && Cp >= 24 && InnovationAura >= 1 && Quality < 45095) Careful Observation | (InnerQuietAura > 0) Byregot's Blessing | Basic Synthesis
+- (IsGood == True && GreatStridesAura > 0 && Durability > 10) Byregot's Blessing | (GreatStridesAura >= 2 && Cp >= 31 && InnovationAura >= 2 && Quality < 45095) Observe | (GreatStridesAura >= 1 && CarefulObservationsRemaining > 0 && Cp >= 24 && InnovationAura >= 1 && Quality < 45095) Careful Observation | (InnerQuietAura > 0) Byregot's Blessing | Basic Synthesis
+- Basic Synthesis
+
+S5A:
+- (IsPliant == True && Cp >= 144 && WasteNot2Aura == 0 && WasteNotAura == 0 && Durability > 5 && EffectiveDurabilityRemaining > 25) Prudent Touch | (Cp >= 156 && WasteNot2Aura == 0 && WasteNotAura == 0 && Durability > 5 && EffectiveDurabilityRemaining > 25) Prudent Touch | (IsPliant == True && WasteNot2Aura == 0 && WasteNotAura == 0 && InnovationAura > 0 && Cp >= 112 && Durability > 5 && EffectiveDurabilityRemaining > 25) Prudent Touch
+- (IsPliant == True && Cp >= 115 && GreatStridesAura < 3) Great Strides | (Cp >= 131 && GreatStridesAura < 3) Great Strides
+- (IsGood == True && EffectiveDurabilityRemaining > 20 && Cp >= 99 && Durability > 10) Precise Touch | (InnovationAura < 4)Innovation
+- (InnerQuietAura > 0 && InnovationAura > 0 && GreatStridesAura > 0 && Quality >= 45095) Byregot's Blessing | (IsGood == True && EffectiveDurabilityRemaining > 20 && Cp >= 81 && Durability > 10) Precise Touch | (InnovationAura > 0 && IsSturdy == True && Cp >= 96 && Durability > 15 && EffectiveDurabilityRemaining > 20) Preparatory Touch | (InnovationAura > 0 && IsSturdy == True && Cp >= 103 && Durability > 10 && Durability < 16 && EffectiveDurabilityRemaining > 20) Preparatory Touch | (InnovationAura < 4) Innovation | (EffectiveDurabilityRemaining > 20 && Durability > 5) Observe
+- (InnerQuietAura == 0) Basic Synthesis | (InnovationAura < 2 && Cp >= 74) Innovation | (InnovationAura > 0 && IsSturdy == True && Cp >= 96 && Durability > 15 && EffectiveDurabilityRemaining > 20) Preparatory Touch | (InnovationAura > 0 && Durability > 5 && Cp >= 56 && Durability <= 10 && EffectiveDurabilityRemaining > 10 && && EffectiveDurabilityRemaining <= 20) Great Strides | (InnovationAura > 0 && Durability < 6 && Cp >= 63 && EffectiveDurabilityRemaining > 10 && && EffectiveDurabilityRemaining <= 20) Observe | (IsGood == True && EffectiveDurabilityRemaining > 20 && Cp >= 74 && Durability > 10) Precise Touch | (IsLastSkillObserve == True && EffectiveDurabilityRemaining > 20 && Durability > 10) Focused Touch | (Cp >= 56) Great Strides
+- (InnovationAura == 4 && GreatStridesAura == 0 && Cp >= 56) Great Strides | (IsLastSkillObserve == True && Cp >= 56 && Durability > 5 && EffectiveDurabilityRemaining > 10) Great Strides | (IsGood == True && GreatStridesAura > 0 && Durability > 10) Byregot's Blessing | (GreatStridesAura >= 2 && Cp >= 31 && InnovationAura >= 2 && Quality < 45095) Observe | (GreatStridesAura == 0) Great Strides | Byregot's Blessing
+- (IsGood == True && GreatStridesAura > 0 && Durability > 10) Byregot's Blessing | (GreatStridesAura >= 2 && Cp >= 31 && InnovationAura >= 2 && Quality < 45095) Observe | (InnerQuietAura > 0) Byregot's Blessing | Basic Synthesis
+- (IsGood == True && GreatStridesAura > 0 && Durability > 10) Byregot's Blessing | (GreatStridesAura >= 2 && Cp >= 31 && InnovationAura >= 2 && Quality < 45095) Observe | (InnerQuietAura > 0) Byregot's Blessing | Basic Synthesis
+- (IsGood == True && GreatStridesAura > 0 && Durability > 10) Byregot's Blessing | (GreatStridesAura >= 2 && Cp >= 31 && InnovationAura >= 2 && Quality < 45095) Observe | (InnerQuietAura > 0) Byregot's Blessing | Basic Synthesis
+- (IsGood == True && GreatStridesAura > 0 && Durability > 10) Byregot's Blessing | (GreatStridesAura >= 2 && Cp >= 31 && InnovationAura >= 2 && Quality < 45095) Observe | (InnerQuietAura > 0) Byregot's Blessing | Basic Synthesis
+- (InnerQuietAura > 0) Byregot's Blessing | Basic Synthesis
+- Basic Synthesis
+
+S5B:
+- (WasteNot2Aura == 0 && WasteNotAura == 0) Prudent Touch
+- (IsPliant == True && Cp >= 115 && GreatStridesAura < 3) Great Strides | (Cp >= 131 && GreatStridesAura < 3) Great Strides
+- (IsGood == True && EffectiveDurabilityRemaining > 20 && Cp >= 99 && Durability > 10) Precise Touch | (InnovationAura < 4)Innovation
+- (InnerQuietAura > 0 && InnovationAura > 0 && GreatStridesAura > 0 && Quality >= 45095) Byregot's Blessing | (IsGood == True && EffectiveDurabilityRemaining > 20 && Cp >= 81 && Durability > 10) Precise Touch | (IsSturdy == True && Durability > 5 && EffectiveDurabilityRemaining > 15 && EffectiveDurabilityRemaining <= 20) Hasty Touch | (InnovationAura > 0 && IsSturdy == True && Cp >= 96 && Durability > 15 && EffectiveDurabilityRemaining > 20) Preparatory Touch | (InnovationAura > 0 && IsSturdy == True && Cp >= 103 && Durability > 10 && Durability < 16 && EffectiveDurabilityRemaining > 20) Preparatory Touch | (InnovationAura < 4) Innovation | (EffectiveDurabilityRemaining > 20 && Durability > 5) Observe 
+- (InnerQuietAura == 0) Basic Synthesis | (InnovationAura < 2 && Cp >= 74) Innovation | (InnovationAura > 0 && IsSturdy == True && Cp >= 96 && Durability > 15 && EffectiveDurabilityRemaining > 20) Preparatory Touch | (InnovationAura > 0 && Durability > 5 && Cp >= 56 && Durability <= 10 && EffectiveDurabilityRemaining > 10 && && EffectiveDurabilityRemaining <= 20) Great Strides | (InnovationAura > 0 && Durability < 6 && Cp >= 63 && EffectiveDurabilityRemaining > 10 && && EffectiveDurabilityRemaining <= 20) Observe | (IsGood == True && EffectiveDurabilityRemaining > 20 && Cp >= 74 && Durability > 10) Precise Touch | (IsLastSkillObserve == True && EffectiveDurabilityRemaining > 20 && Durability > 10) Focused Touch | (Cp >= 56) Great Strides
+- (InnovationAura == 4 && GreatStridesAura == 0 && Cp >= 56) Great Strides | (IsLastSkillObserve == True && Cp >= 56 && Durability > 5 && EffectiveDurabilityRemaining > 10) Great Strides | (IsGood == True && GreatStridesAura > 0 && Durability > 10) Byregot's Blessing | (GreatStridesAura >= 2 && Cp >= 31 && InnovationAura >= 2 && Quality < 45095) Observe | (GreatStridesAura == 0) Great Strides | Byregot's Blessing
+- (IsGood == True && GreatStridesAura > 0 && Durability > 10) Byregot's Blessing | (GreatStridesAura >= 2 && Cp >= 31 && InnovationAura >= 2 && Quality < 45095) Observe | (InnerQuietAura > 0) Byregot's Blessing | Basic Synthesis
+- (IsGood == True && GreatStridesAura > 0 && Durability > 10) Byregot's Blessing | (GreatStridesAura >= 2 && Cp >= 31 && InnovationAura >= 2 && Quality < 45095) Observe | (InnerQuietAura > 0) Byregot's Blessing  | Basic Synthesis
+- (IsGood == True && GreatStridesAura > 0 && Durability > 10) Byregot's Blessing | (GreatStridesAura >= 2 && Cp >= 31 && InnovationAura >= 2 && Quality < 45095) Observe | (InnerQuietAura > 0) Byregot's Blessing  | Basic Synthesis
+- (IsGood == True && GreatStridesAura > 0 && Durability > 10) Byregot's Blessing | (GreatStridesAura >= 2 && Cp >= 31 && InnovationAura >= 2 && Quality < 45095) Observe | (InnerQuietAura > 0) Byregot's Blessing  | Basic Synthesis
+- (InnerQuietAura > 0) Byregot's Blessing | Basic Synthesis
+- Basic Synthesis
+
+
+S5C:
+- (GreatStridesAura < 3)Great Strides
+- (InnovationAura < 4) Innovation
+- (InnerQuietAura > 0 && InnovationAura > 0 && GreatStridesAura > 0 && Quality >= 45095) Byregot's Blessing | Waste Not
+- (InnerQuietAura == 0) Basic Synthesis | Preparatory Touch
+- Great Strides
+- Byregot's Blessing
+- Basic Synthesis
+
+S5D:
+- (IsPliant == True && Cp >= 130 && GreatStridesAura < 2) Great Strides | (Cp >= 146 && GreatStridesAura < 2) Great Strides
+- (IsGood == True && EffectiveDurabilityRemaining > 30 && Cp >= 114 && Durability > 20) Preparatory Touch | (InnovationAura < 4) Innovation
+- (InnerQuietAura == 0) Basic Synthesis | (InnerQuietAura > 0 && InnovationAura > 0 && GreatStridesAura > 0 && Quality >= 45095) Byregot's Blessing | (InnovationAura > 0 && IsSturdy == True && Cp >= 96 && Durability > 10 && EffectiveDurabilityRemaining > 20) Preparatory Touch | (InnovationAura > 0 && Cp >= 96 && Durability > 20 && EffectiveDurabilityRemaining > 30) Preparatory Touch | (InnovationAura < 4) Innovation
+- (InnovationAura < 2) Innovation | (IsPliant == True && InnovationAura > 0 && WasteNot2Aura == 0 && WasteNotAura == 0 && Durability > 5 && EffectiveDurabilityRemaining > 20 && Cp >= 69) Prudent Touch  | (InnovationAura > 0 && WasteNot2Aura == 0 && WasteNotAura == 0 && Durability > 5 && EffectiveDurabilityRemaining > 20 && Cp >= 81) Prudent Touch | (IsSturdy == True && Durability > 5 && EffectiveDurabilityRemaining > 15) Hasty Touch | (IsSturdy == True && Durability > 10 && EffectiveDurabilityRemaining > 20) Hasty Touch | (Cp >= 56 && GreatStridesAura == 0) Great Strides
+- (InnovationAura >= 2 && GreatStridesAura == 0) Great Strides | (IsGood == True && GreatStridesAura > 0 && Durability > 10) Byregot's Blessing | (IsPliant == True && WasteNot2Aura == 0 && WasteNotAura == 0 && InnovationAura >= 3 && Durability > 5 && EffectiveDurabilityRemaining > 20 && Cp >= 69 && GreatStridesAura == 0) Prudent Touch  | (InnovationAura >= 3 && WasteNot2Aura == 0 && WasteNotAura == 0 && Durability > 5 && EffectiveDurabilityRemaining > 15 && Cp >= 81 && GreatStridesAura == 0) Prudent Touch | (InnovationAura >= 2 && GreatStridesAura == 0) Great Strides | (GreatStridesAura >= 2 && Cp >= 31 && InnovationAura >= 2 && Quality < 45095) Observe | (InnerQuietAura > 0) Byregot's Blessing
+- (IsGood == True && GreatStridesAura > 0 && Durability > 10) Byregot's Blessing | (GreatStridesAura >= 2 && Cp >= 31 && InnovationAura >= 2 && Quality < 45095) Observe | (InnerQuietAura > 0) Byregot's Blessing | Basic Synthesis
+- (IsGood == True && GreatStridesAura > 0 && Durability > 10) Byregot's Blessing | (GreatStridesAura >= 2 && Cp >= 31 && InnovationAura >= 2 && Quality < 45095) Observe | (InnerQuietAura > 0) Byregot's Blessing | Basic Synthesis
+- (IsGood == True && GreatStridesAura > 0 && Durability > 10) Byregot's Blessing | (GreatStridesAura >= 2 && Cp >= 31 && InnovationAura >= 2 && Quality < 45095) Observe | (InnerQuietAura > 0) Byregot's Blessing | Basic Synthesis
+- (IsGood == True && GreatStridesAura > 0 && Durability > 10) Byregot's Blessing | (GreatStridesAura >= 2 && Cp >= 31 && InnovationAura >= 2 && Quality < 45095) Observe | (InnerQuietAura > 0) Byregot's Blessing | Basic Synthesis
+- (IsGood == True && GreatStridesAura > 0 && Durability > 10) Byregot's Blessing | (GreatStridesAura >= 2 && Cp >= 31 && InnovationAura >= 2 && Quality < 45095) Observe | (InnerQuietAura > 0) Byregot's Blessing | Basic Synthesis
+- Basic Synthesis
+
+S5E:
+- (IsPliant == True && Cp >= 155 && GreatStridesAura < 2) Great Strides | (Cp >= 171 && GreatStridesAura < 2) Great Strides
+- (IsGood == True && EffectiveDurabilityRemaining > 30 && Cp >= 139 && Durability > 20) Preparatory Touch | (InnovationAura < 4) Innovation
+- (InnovationAura > 0 && IsSturdy == True && Cp >= 139 && Durability > 10 && EffectiveDurabilityRemaining > 20) Preparatory Touch | (InnovationAura > 0 && Cp >= 139 && Durability > 20 && EffectiveDurabilityRemaining > 30) Preparatory Touch | (InnovationAura < 4) Innovation | Observe
+- (IsSturdy == True && Cp >= 96 && Durability > 10 && EffectiveDurabilityRemaining > 20 && InnovationAura >= 3) Preparatory Touch | (Cp >= 96 && Durability > 20 && EffectiveDurabilityRemaining > 30 && InnovationAura >= 3) Preparatory Touch | (IsPliant == True && InnovationAura >= 2 && Durability > 20 && EffectiveDurabilityRemaining > 30 && Cp >= 76 && InnovationAura >= 3) Preparatory Touch | (IsPliant == True && WasteNot2Aura == 0 && WasteNotAura == 0 && InnovationAura >= 2 && Durability > 5 && EffectiveDurabilityRemaining > 20 && Cp >= 69 && GreatStridesAura == 0) Prudent Touch | (InnovationAura >= 3 && WasteNot2Aura == 0 && WasteNotAura == 0 && Durability > 5 && EffectiveDurabilityRemaining > 15 && Cp >= 81 && GreatStridesAura == 0) Prudent Touch
+- (IsPliant == True && WasteNot2Aura == 0 && WasteNotAura == 0 && InnovationAura >= 3 && Durability > 5 && EffectiveDurabilityRemaining > 20 && Cp >= 69 && GreatStridesAura == 0) Prudent Touch | (WasteNot2Aura == 0 && WasteNotAura == 0 && InnovationAura >= 3 && Durability > 5 && EffectiveDurabilityRemaining > 15 && Cp >= 81 && GreatStridesAura == 0) Prudent Touch | (InnovationAura >= 2 && GreatStridesAura == 0) Great Strides
+- (InnovationAura >= 2 && GreatStridesAura == 0 && Cp >= 56) Great Strides | (IsGood == True && GreatStridesAura > 0 && Durability > 10) Byregot's Blessing | (GreatStridesAura >= 2 && Cp >= 31 && InnovationAura >= 2 && Quality < 45095) Observe | (InnerQuietAura > 0) Byregot's Blessing
+- (IsGood == True && GreatStridesAura > 0 && Durability > 10) Byregot's Blessing | (GreatStridesAura >= 2 && Cp >= 31 && InnovationAura >= 2 && Quality < 45095) Observe | (InnerQuietAura > 0) Byregot's Blessing | Basic Synthesis
+- (IsGood == True && GreatStridesAura > 0 && Durability > 10) Byregot's Blessing | (GreatStridesAura >= 2 && Cp >= 31 && InnovationAura >= 2 && Quality < 45095) Observe | (InnerQuietAura > 0) Byregot's Blessing | Basic Synthesis
+- (IsGood == True && GreatStridesAura > 0 && Durability > 10) Byregot's Blessing | (GreatStridesAura >= 2 && Cp >= 31 && InnovationAura >= 2 && Quality < 45095) Observe | (InnerQuietAura > 0) Byregot's Blessing | Basic Synthesis
+- (IsGood == True && GreatStridesAura > 0 && Durability > 10) Byregot's Blessing | (GreatStridesAura >= 2 && Cp >= 31 && InnovationAura >= 2 && Quality < 45095) Observe | (InnerQuietAura > 0) Byregot's Blessing | Basic Synthesis
+- Basic Synthesis
+
+S5F:
+- (IsPliant == True && Cp >= 155 && GreatStridesAura < 2) Great Strides | (Cp >= 171 && GreatStridesAura < 2) Great Strides
+- (IsGood == True && EffectiveDurabilityRemaining > 30 && Cp >= 139 && Durability > 20) Preparatory Touch | (InnovationAura < 4) Innovation
+- (InnovationAura > 0 && IsSturdy == True && Cp >= 139 && Durability > 10 && EffectiveDurabilityRemaining > 20) Preparatory Touch | (InnovationAura > 0 && Cp >= 139 && Durability > 20 && EffectiveDurabilityRemaining > 30) Preparatory Touch | (InnovationAura < 4) Innovation
+- (IsSturdy == True && Cp >= 96 && Durability > 10 && EffectiveDurabilityRemaining > 20 && InnovationAura >= 3) Preparatory Touch | (Cp >= 96 && Durability > 20 && EffectiveDurabilityRemaining > 30 && InnovationAura >= 3) Preparatory Touch | (InnovationAura < 2) Innovation
+- (IsSturdy == True && Cp >= 96 && Durability > 10 && EffectiveDurabilityRemaining > 20 && InnovationAura >= 3) Preparatory Touch | (Cp >= 96 && Durability > 20 && EffectiveDurabilityRemaining > 30 && InnovationAura >= 3) Preparatory Touch | (InnovationAura >= 2 && GreatStridesAura == 0) Great Strides
+- (InnovationAura >= 2 && GreatStridesAura == 0) Great Strides | (IsGood == True && GreatStridesAura > 0 && Durability > 10) Byregot's Blessing | (GreatStridesAura >= 2 && Cp >= 31 && InnovationAura >= 2 && Quality < 45095) Observe | (InnerQuietAura > 0) Byregot's Blessing
+- (IsGood == True && GreatStridesAura > 0 && Durability > 10) Byregot's Blessing | (GreatStridesAura >= 2 && Cp >= 31 && InnovationAura >= 2 && Quality < 45095) Observe | (InnerQuietAura > 0) Byregot's Blessing | Basic Synthesis
+- (IsGood == True && GreatStridesAura > 0 && Durability > 10) Byregot's Blessing | (GreatStridesAura >= 2 && Cp >= 31 && InnovationAura >= 2 && Quality < 45095) Observe | (InnerQuietAura > 0) Byregot's Blessing | Basic Synthesis
+- (IsGood == True && GreatStridesAura > 0 && Durability > 10) Byregot's Blessing | (GreatStridesAura >= 2 && Cp >= 31 && InnovationAura >= 2 && Quality < 45095) Observe | (InnerQuietAura > 0) Byregot's Blessing | Basic Synthesis
+- (IsGood == True && GreatStridesAura > 0 && Durability > 10) Byregot's Blessing | (GreatStridesAura >= 2 && Cp >= 31 && InnovationAura >= 2 && Quality < 45095) Observe | (InnerQuietAura > 0) Byregot's Blessing | Basic Synthesis
+- Basic Synthesis

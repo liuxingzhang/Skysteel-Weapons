@@ -231,7 +231,23 @@ Required: LLamaLibrary BotBase
 
 				<While Condition="HasAtLeast(31741,60)"> <!-- Oddly Delicate Needle Part -->
 				  <ChangeClass Job="Weaver" force="True"/>
-					<EquipWeapon ItemID="30445"/>
+
+					<!--没有490HQ，购买新手装备-->
+					<if Condition="not HasItem(30445)">
+						<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 30298">
+							<Log Message="Skysung Tool equipped, going to purchase differnt tool." />
+							<LisbethTravel Area="Central Thanalan" Position="-10.76859, -2.04808, -149.7865"/>
+							<BuyItem NpcId="1001563" ItemId="2443" ItemCount="1" DialogOption="1" XYZ="-8.346741,-2.04808,-149.3401"/>
+							<EquipWeapon ItemID="2443"/>
+							<WaitTimer WaitTime="3" />
+						</While>
+					</if>
+
+					<!--有490HQ主手优先装备490HQ-->
+					<if Condition="HasItem(30445)">
+						<EquipWeapon ItemID="30445"/>
+					</if>
+
 				  <LisbethTravel Zone="886" Subzone="3526" Position="-74.0461, -10, 168.7935"/>
 				  <LLTurnIn QuestId="69519" NpcId="1035012" XYZ="-72.67877, -10, 169.1157"/>
 				  <LLSmallTalk/>				  

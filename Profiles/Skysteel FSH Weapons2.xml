@@ -360,8 +360,25 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 					</If>
 					<!--判断改良用零件是否数量足够，不够继续采集收藏品-->
 					<If Condition="not HasAtLeast(31749,200)">
-						<Lisbeth Json="[{'Group':1,'Item':31771,'Amount':10,'Enabled':true,'Type':'Fisher','Collectable':true}]"/> <!-- Pickled Pom -->
+						<LisbethTravel Zone="402" Position="-711.1324, -85.66238, 246.9259"/>
 					</If>
+					<!--下坐骑-->
+					<RunCode Name="DisableMount"/>
+					<!-- and not LLHasItemCollectable(31771)-->
+					<ExFish EnableKeeper="True" Stealth="true" Condition="HasAtLeast(30136,1)" Mooch="0" Snagging="False" CordialType="Auto" MinFish="99" MaxFish="99" ShuffleFishSpots="false" Bait="Signature Skyball" Mount="False" Patience="Patience" MinimumGPPatience="400" Collectables="True" Collect="True" CollectabilityValue="10">
+						<Keepers>
+							<!--名称修改为中文-->
+							<Keeper Name="褪色球球"/>
+						</Keepers>
+						<FishSpots>
+							<FishSpot XYZ="-711.1324, -85.66238, 246.9259" Heading="3.0" Sit="True"/>
+							<FishSpot XYZ="-705.9681, -86.3671, 231.5525" Heading="2.0" Sit="True"/>
+						</FishSpots>
+						<PatienceTugs>
+							<PatienceTug Mooch="0" TugType="Light"/>
+						</PatienceTugs>
+					</ExFish>
+					<RunCode Name="EnableMount"/>
 				</While>
 				<!--判断背包零件数量-->
 				<While Condition="not HasAtLeast(31748,200)"> <!-- Oddly Delicate Fishing Rod Part -->
@@ -376,7 +393,8 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 					</If>
 					<!--下坐骑-->
 					<RunCode Name="DisableMount"/>
-					<ExFish EnableKeeper="True" Stealth="true" Condition="HasAtLeast(30136,1) and not LLHasItemCollectable(31770)" Mooch="0" Snagging="False" CordialType="Auto" MinFish="99" MaxFish="99" ShuffleFishSpots="false" Bait="Signature Skyball" Mount="False" Patience="Patience" MinimumGPPatience="400" Collectables="True" Collect="True" CollectabilityValue="10">
+					<!-- and not LLHasItemCollectable(31770)-->
+					<ExFish EnableKeeper="True" Stealth="true" Condition="HasAtLeast(30136,1)" Mooch="0" Snagging="False" CordialType="Auto" MinFish="99" MaxFish="99" ShuffleFishSpots="false" Bait="Signature Skyball" Mount="False" Patience="Patience" MinimumGPPatience="400" Collectables="True" Collect="True" CollectabilityValue="10">
 						<Keepers>
 							<!--名称修改为中文-->
 							<Keeper Name="点火鱼"/>
