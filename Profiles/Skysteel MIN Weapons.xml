@@ -384,13 +384,20 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 				</While>				
 				<While Condition="HasAtLeast(31746,250) and HasAtLeast(31747,25)"> <!-- Oddly Delicate Adamantite Ore and Inconceivably Delicate Pickaxe Part -->
 				  <ChangeClass Job="Miner" force="True"/>
-					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 30302">
-						<Log Message="Skysung Tool equipped, going to purchase differnt tool." />
-						<LisbethTravel Area="Western Thanalan" Position="208.6721, 52.03812, 135.4593"/>
-						<BuyItem NpcId="1003724" ItemId="2520" ItemCount="1" DialogOption="1" XYZ="207.1716,52.03812,134.1726"/>
-						<EquipWeapon ItemID="2520"/>
-						<WaitTimer WaitTime="3" />
-					</While>				  
+					<!--没有490HQ，购买新手装备-->
+					<If Condition="not HasItem(30448)">
+						<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 30302">
+							<Log Message="Skysung Tool equipped, going to purchase differnt tool." />
+							<LisbethTravel Area="Western Thanalan" Position="208.6721, 52.03812, 135.4593"/>
+							<BuyItem NpcId="1003724" ItemId="2520" ItemCount="1" DialogOption="1" XYZ="207.1716,52.03812,134.1726"/>
+							<EquipWeapon ItemID="2520"/>
+							<WaitTimer WaitTime="3" />
+						</While>
+					</If>
+					<!--有490HQ主手优先装备490HQ-->
+					<If Condition="HasItem(30448)">
+						<EquipWeapon ItemID="30448"/>
+					</If>
 				  <LisbethTravel Zone="886" Subzone="3526" Position="-74.0461, -10, 168.7935"/>
 				  <LLTurnIn QuestId="69519" NpcId="1035012" XYZ="-72.67877, -10, 169.1157"/>
 				  <LLSmallTalk/>			  

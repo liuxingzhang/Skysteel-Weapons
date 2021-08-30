@@ -65,7 +65,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 				<LisbethTravel Zone="399" Position="30.28768, 52.93113, 87.8614"/>
 			</If>
 			<RunCode Name="DisableMount"/>
-			<ExFish EnableKeeper="True" Stealth="true" Condition="HasAtLeast(30136,1) and not HqHasAtLeast(29673,40)" Mooch="0" Snagging="False" CordialType="Auto" MinFish="&MinFish;" MaxFish="&MaxFish;" ShuffleFishSpots="True" Bait="Signature Skyball" Mount="False" Patience="Patience" MinimumGPPatience="400">
+			<ExFish EnableKeeper="True" Stealth="true" Condition="HasAtLeast(30136,1) and not HqHasAtLeast(29673,40)" Mooch="0" Snagging="False" CordialType="Auto" MinFish="99" MaxFish="99" ShuffleFishSpots="True" Bait="Signature Skyball" Mount="False" Patience="Patience" MinimumGPPatience="400">
 				<Keepers>
 					<!--名称修改为中文-->
 					<Keeper Name="智慧珊瑚"/>
@@ -109,7 +109,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 			<Log Color="&LogTxt;" Message="Going to fish some Dragonspine!"/>
 			<LisbethTravel Zone="397" Position="-680.4474, 99.50026, -618.0323"/>
 			<RunCode Name="DisableMount"/>
-			<ExFish EnableKeeper="True" Stealth="true" Condition="HasAtLeast(30136,1) and not HqHasAtLeast(29678,60)" Mooch="0" Snagging="False" CordialType="Auto" MinFish="&MinFish;" MaxFish="&MaxFish;" ShuffleFishSpots="True" Bait="Signature Skyball" Mount="False" Patience="Patience" MinimumGPPatience="400">
+			<ExFish EnableKeeper="True" Stealth="true" Condition="HasAtLeast(30136,1) and not HqHasAtLeast(29678,60)" Mooch="0" Snagging="False" CordialType="Auto" MinFish="99" MaxFish="99" ShuffleFishSpots="True" Bait="Signature Skyball" Mount="False" Patience="Patience" MinimumGPPatience="400">
 				<Keepers>
 					<!--名称修改为中文-->
 					<Keeper Name="龙骨贝"/>
@@ -343,7 +343,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 			  </If>
 			</If>
 			<While Condition="GetQuestStep(69519) == 255">
-				<While condition="not HasAtLeast(30136,500)">
+				<While condition="not HasAtLeast(30136,200)">
 					<Log Message="Buy some Signature Skyball from Foundation!"/>
 					<GetTo ZoneId="418" XYZ="-161.5168, 16.99999, -57.14508"/>
 					<!--修复不能购买天钢之球-->

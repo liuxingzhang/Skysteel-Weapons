@@ -379,13 +379,20 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 				</While>				
 				<While Condition="HasAtLeast(31744,250) and HasAtLeast(31745,25)"> <!-- Oddly Delicate Hatchet Part and Inconceivably Delicate Hatchet Part -->
 				  <ChangeClass Job="Botanist" force="True"/>
-					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 30301">
-						<Log Message="Skysung Tool equipped, going to purchase differnt tool." />
-						<LisbethTravel Area="North Shroud" Position="332.9388, -5.550671, 330.6815"/>
-						<BuyItem NpcId="1000718" ItemId="2546" ItemCount="1" DialogOption="1" XYZ="332.2346,-5.550671,332.4788"/>
-						<EquipWeapon ItemID="2546"/>
-						<WaitTimer WaitTime="3" />
-					</While>				  
+					<!--没有490HQ，购买新手装备-->
+					<If Condition="not HasItem(30449)">
+						<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 30301">
+							<Log Message="Skysung Tool equipped, going to purchase differnt tool." />
+							<LisbethTravel Area="North Shroud" Position="332.9388, -5.550671, 330.6815"/>
+							<BuyItem NpcId="1000718" ItemId="2546" ItemCount="1" DialogOption="1" XYZ="332.2346,-5.550671,332.4788"/>
+							<EquipWeapon ItemID="2546"/>
+							<WaitTimer WaitTime="3" />
+						</While>
+					</If>
+					<!--有490HQ主手优先装备490HQ-->
+					<If Condition="HasItem(30449)">
+						<EquipWeapon ItemID="30449"/>
+					</If>
 				  <LisbethTravel Zone="886" Subzone="3526" Position="-74.0461, -10, 168.7935"/>
 				  <LLTurnIn QuestId="69519" NpcId="1035012" XYZ="-72.67877, -10, 169.1157"/>
 				  <LLSmallTalk/>				  

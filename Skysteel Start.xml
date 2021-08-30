@@ -8,14 +8,14 @@ Required: LLamaLibrary BotBase
 -->
 <!DOCTYPE Profile [
 <!-- Profile Settings -->
-<!ENTITY alc "0">
-<!ENTITY arm "0">
+<!ENTITY alc "1">
+<!ENTITY arm "1">
 <!ENTITY bsm "1">
-<!ENTITY crp "0"><!-- If you don't want to collect a certain weapon change "1" to "0" -->
+<!ENTITY crp "1"><!-- If you don't want to collect a certain weapon change "1" to "0" -->
 <!ENTITY cul "1">
 <!ENTITY gsm "1">
 <!ENTITY ltw "1">
-<!ENTITY wvr "0">
+<!ENTITY wvr "1">
 <!ENTITY btn "0">
 <!ENTITY min "0">
 <!ENTITY fsh "0">
